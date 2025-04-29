@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit" id="cartButton">
+                        <button class="btn btn-outline-dark" type="button" id="cartButton" data-bs-toggle="modal" data-bs-target="#carrito_modal">
                             <i class="bi-cart-fill me-1"></i>
                             Carro
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
@@ -77,6 +77,26 @@
     </body>
 
     <extra>
+        <div class="modal fade" id="carrito_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
         <div class="modal" tabindex="-1" id="whoModal">
             <div class="modal-dialog">
               <div class="modal-content">

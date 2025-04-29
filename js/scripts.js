@@ -6,6 +6,7 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
+
 const tenis =[
     {
         idTeni:1,
@@ -36,8 +37,17 @@ const tenis =[
     },
 ];
 
+var carrito = [];
+
 window.onload = function(){
+
+    onloading();
+}
+
+function onloading(){
+
     tenis.forEach(t => {
+        
         document.getElementById("contenedor").innerHTML += `
             <div class="col mb-5">
                         <div class="card h-100">
@@ -54,10 +64,26 @@ window.onload = function(){
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al 🛒</a></div>
+                                <div class="text-center"><button type="button" id="btn_${t.idTeni}" class="btn btn-outline-dark mt-auto" href="#">Agregar al 🛒</button></div>
                             </div>
                         </div>
                     </div>
         `;
+    });
+
+
+
+    cargarBotones();
+    
+
+ 
+}
+
+function cargarBotones()
+{
+    tenis.forEach(t => {
+        document.getElementById("btn_"+t.idTeni).onclick() = function(){
+            carrito.push(t);
+        }
     });
 }
