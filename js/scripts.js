@@ -5,3 +5,59 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+
+const tenis =[
+    {
+        idTeni:1,
+        marca:"Nikke",
+        color:"Blanco",
+        talla:28,
+        precio:1200,
+        stock:12,
+        imagen:"nike.webp"
+    },
+    {
+        idTeni:2,
+        marca:"Addidas",
+        color:"Negro",
+        talla:26,
+        precio:1010,
+        stock:8,
+        imagen:"adidas.webp"
+    },
+    {
+        idTeni:3,
+        marca:"Converse",
+        color:"Blanco",
+        talla:27,
+        precio:600,
+        stock:28,
+        imagen:"converse.webp"
+    },
+];
+
+window.onload = function(){
+    tenis.forEach(t => {
+        document.getElementById("contenedor").innerHTML += `
+            <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top"  id="" src="${t.imagen}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">${t.marca}</h5>
+                                    <!-- Product price-->
+                                    $${t.precio}
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al 🛒</a></div>
+                            </div>
+                        </div>
+                    </div>
+        `;
+    });
+}
