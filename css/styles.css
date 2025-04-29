@@ -10824,3 +10824,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+img:hover {
+  opacity: 0.7;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
