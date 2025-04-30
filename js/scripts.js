@@ -72,7 +72,7 @@ window.onload = function(){
 function onloading(){
 
     tenis.forEach(t => {
-        
+      
         document.getElementById("contenedor").innerHTML += `
             <div class="col mb-5">
                         <div class="card h-100">
@@ -94,21 +94,13 @@ function onloading(){
                         </div>
                     </div>
         `;
-    });
-
-
-
-    cargarBotones();
-    
-
- 
-}
-
-function cargarBotones()
-{
-    tenis.forEach(t => {
-        document.getElementById("btn_"+t.idTeni).onclick() = function(){
+        document.getElementById("btn_"+t.idTeni).onclick = function(){
             carrito.push(t);
         }
+        
     });
+ 
+    document.getElementById("carrito_modal_body").innerHTML += ``;
+
 }
+
