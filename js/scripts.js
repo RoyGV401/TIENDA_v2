@@ -34,6 +34,31 @@ const tenis =[
         stock:28,
         imagen:"converse.webp"
     },
+    {
+        idTeni:3,
+        marca:"Converse",
+        color:"Blanco",
+        talla:27,
+        precio:600,
+        stock:28,
+        imagen:"Puma.jpg"
+    },{
+        idTeni:3,
+        marca:"Converse",
+        color:"Blanco",
+        talla:27,
+        precio:600,
+        stock:28,
+        imagen:"Skecher.webp"
+    },{
+        idTeni:3,
+        marca:"Converse",
+        color:"Blanco",
+        talla:27,
+        precio:600,
+        stock:28,
+        imagen:"NavyFila.webp"
+    }
 ];
 
 window.onload = function(){
