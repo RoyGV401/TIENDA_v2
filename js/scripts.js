@@ -6,10 +6,9 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
-
 import { TENIS } from "./src/tenis.js";
 
-const tenis = TENIS;
+var tenis = TENIS;
 
 const brands = getBrands();
 const colors = getColors();
@@ -18,6 +17,7 @@ const FILTERS = {
     color:undefined,
     brand:undefined
 }
+
 
 var carrito = [];
 
@@ -28,56 +28,61 @@ window.onload = function(){
 }
 
 
-
-function loadShoes(){
-
+function loadShoes() {
+    let html = ``;
     let toSearch = tenis;
-    
-    if (FILTERS.color != undefined)
-    {
+
+    if (FILTERS.color != undefined) {
         toSearch = toSearch.filter((s) => s.color == FILTERS.color);
     }
 
-    if (FILTERS.brand != undefined)
-    {
+    if (FILTERS.brand != undefined) {
         toSearch = toSearch.filter((s) => s.marca == FILTERS.brand);
     }
 
     document.getElementById("contenedor").innerHTML = "";
-    
-    toSearch.forEach(t => {
 
-        
-      
-        document.getElementById("contenedor").innerHTML += `
+    toSearch.forEach(t => {
+        html += `
             <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top"  id="" src="${t.imagen}" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">${t.marca}</h5>
-                                    <!-- Product price-->
-                                    $${t.precio}
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><button type="button" id="btn_${t.idTeni}" class="btn btn-outline-dark mt-auto" href="#">Agregar al 🛒</button></div>
-                            </div>
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <!-- <img class="card-img-top" id="" src="${t.imagen}" alt="..." /> -->
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">${t.marca}</h5>
+                            <!-- Product price-->
+                            $${t.precio}
                         </div>
                     </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <button type="button" id="btn_${t.idTeni}" class="btn btn-outline-dark mt-auto">Agregar al 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         `;
-        document.getElementById("btn_"+t.idTeni).onclick = function(){
-            carrito.push(t);
-        }
-        
     });
- 
-    document.getElementById("carrito_modal_body").innerHTML += ``;
 
+    document.getElementById("contenedor").innerHTML = html;
+
+    tenis.forEach(t => {
+        document.getElementById("btn_" + t.idTeni).onclick = function () {
+            carrito.push(t);
+        };
+    });
+
+    document.getElementById("cartButton").onclick = function () {
+        let html = ``;
+        carrito.forEach(c => {
+            html += `<p>${c.marca}</p>`;
+        });
+        document.getElementById("carrito_modal_body").innerHTML = html;
+    };
 }
 
 function loadFilters()
