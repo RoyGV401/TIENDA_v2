@@ -6,12 +6,9 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
-
 import { TENIS } from "./src/tenis.js";
 
-const tenis = TENIS;
-
-
+var tenis = TENIS;
 
 var carrito = [];
 
@@ -21,14 +18,14 @@ window.onload = function(){
 }
 
 function onloading(){
-
+    let html = ``;
     tenis.forEach(t => {
       
-        document.getElementById("contenedor").innerHTML += `
+        html  += `
             <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top"  id="" src="${t.imagen}" alt="..." />
+                           <!-- <img class="card-img-top"  id="" src="${t.imagen}" alt="..." /> -->
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -44,14 +41,28 @@ function onloading(){
                             </div>
                         </div>
                     </div>
-        `;
+            `;
+            
+        
+    });
+    document.getElementById("contenedor").innerHTML = html;
+    tenis.forEach(t=>{
         document.getElementById("btn_"+t.idTeni).onclick = function(){
             carrito.push(t);
         }
+    })
         
-    });
+    document.getElementById("cartButton").onclick= function(){
+        let html = ``;
+        carrito.forEach(c => {
+            html += `
+                <p>${c.marca}</p>
+            `;
+        });
+        document.getElementById("carrito_modal_body").innerHTML = html;
+    }
  
-    document.getElementById("carrito_modal_body").innerHTML += ``;
+   
 
 }
 
