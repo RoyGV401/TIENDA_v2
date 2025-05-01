@@ -7,60 +7,11 @@
 // Use this file to add JavaScript to your project
 
 
-const tenis =[
-    {
-        idTeni:1,
-        marca:"Nikke",
-        color:"Blanco",
-        talla:28,
-        precio:1200,
-        stock:12,
-        imagen:"nike.webp"
-    },
-    {
-        idTeni:2,
-        marca:"Addidas",
-        color:"Negro",
-        talla:26,
-        precio:1010,
-        stock:8,
-        imagen:"adidas.webp"
-    },
-    {
-        idTeni:3,
-        marca:"Converse",
-        color:"Blanco",
-        talla:27,
-        precio:600,
-        stock:28,
-        imagen:"converse.webp"
-    },
-    {
-        idTeni:3,
-        marca:"Converse",
-        color:"Blanco",
-        talla:27,
-        precio:600,
-        stock:28,
-        imagen:"Puma.jpg"
-    },{
-        idTeni:3,
-        marca:"Converse",
-        color:"Blanco",
-        talla:27,
-        precio:600,
-        stock:28,
-        imagen:"Skecher.webp"
-    },{
-        idTeni:3,
-        marca:"Converse",
-        color:"Blanco",
-        talla:27,
-        precio:600,
-        stock:28,
-        imagen:"NavyFila.webp"
-    }
-];
+import { TENIS } from "./src/tenis.js";
+
+const tenis = TENIS;
+
+
 
 var carrito = [];
 
