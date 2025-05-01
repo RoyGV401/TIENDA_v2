@@ -58,7 +58,7 @@ export const TENIS =
       fecha: "25-08-2022",
       valoracion: 4.9,
       stock: 3
-    ,imagen: "../resources/teni4.webp"},
+    ,imagen: "../resources/teni4.avif"},
     {
       idTeni: 5,
       marca: "Reebok",
@@ -72,10 +72,10 @@ export const TENIS =
       fecha: "20-12-2024",
       valoracion: 3.7,
       stock: 11
-    ,imagen: "../resources/teni5.webp"},
+    ,imagen: "../resources/teni5.jpg"},
     {
       idTeni: 6,
-      marca: "Reebok",
+      marca: "Adidas",
       modelo: "Ultraboost",
       tipo: "Correr",
       color: "Negro",
@@ -86,7 +86,7 @@ export const TENIS =
       fecha: "20-08-2023",
       valoracion: 3.7,
       stock: 23
-    ,imagen: "../resources/teni6.webp"},
+    ,imagen: "../resources/teni6.jpg"},
     {
       idTeni: 7,
       marca: "Reebok",
@@ -103,7 +103,7 @@ export const TENIS =
     ,imagen: "../resources/teni7.webp"},
     {
       idTeni: 8,
-      marca: "Paragon",
+      marca: "Adidas",
       modelo: "Ignite",
       tipo: "Senderismo",
       color: "Azul",
@@ -114,16 +114,16 @@ export const TENIS =
       fecha: "03-03-2023",
       valoracion: 3.4,
       stock: 5
-    ,imagen: "../resources/teni8.webp"},
+    ,imagen: "../resources/teni8.jpg"},
     {
       idTeni: 9,
       marca: "Adidas",
       modelo: "Samba",
-      tipo: "Senderismo",
+      tipo: "Casual",
       color: "Azul",
       talla: 6,
       genero: "Masculino",
-      material: "Sintético",
+      material: "Gamuza",
       precio: 6200,
       fecha: "07-05-2024",
       valoracion: 3.8,
@@ -133,8 +133,8 @@ export const TENIS =
       idTeni: 10,
       marca: "Reebok",
       modelo: "Comfit",
-      tipo: "Baloncesto",
-      color: "Rojo",
+      tipo: "Casual",
+      color: "Blanco",
       talla: 9,
       genero: "Masculino",
       material: "Malla",
@@ -142,7 +142,7 @@ export const TENIS =
       fecha: "21-12-2022",
       valoracion: 4.9,
       stock: 11
-    ,imagen: "../resources/teni10.webp"},
+    ,imagen: "../resources/teni10.jpg"},
     {
       idTeni: 11,
       marca: "Sparx",
@@ -159,10 +159,10 @@ export const TENIS =
     ,imagen: "../resources/teni11.webp"},
     {
       idTeni: 12,
-      marca: "Puma",
+      marca: "Adidas",
       modelo: "Yeezy Boost",
       tipo: "Senderismo",
-      color: "Verde",
+      color: "Negro",
       talla: 6,
       genero: "Femenino",
       material: "Tela",
@@ -173,7 +173,7 @@ export const TENIS =
     ,imagen: "../resources/teni12.webp"},
     {
       idTeni: 13,
-      marca: "New Balance",
+      marca: "Puma",
       modelo: "Future Rider",
       tipo: "Correr",
       color: "Rojo",
@@ -184,13 +184,13 @@ export const TENIS =
       fecha: "10-01-2024",
       valoracion: 4.7,
       stock: 14
-    ,imagen: "../resources/teni13.webp"},
+    ,imagen: "../resources/teni13.jpg"},
     {
       idTeni: 14,
-      marca: "Paragon",
-      modelo: "SS-421",
+      marca: "Skechers",
+      modelo: "UNO",
       tipo: "Correr",
-      color: "Gris",
+      color: "Azul",
       talla: 7,
       genero: "Femenino",
       material: "Tela",
@@ -202,7 +202,7 @@ export const TENIS =
     {
       idTeni: 15,
       marca: "Bata",
-      modelo: "Ignite",
+      modelo: "Power",
       tipo: "Correr",
       color: "Rojo",
       talla: 5,
@@ -212,7 +212,7 @@ export const TENIS =
       fecha: "20-04-2024",
       valoracion: 3.7,
       stock: 28
-    ,imagen: "../resources/teni15.webp"},
+    ,imagen: "../resources/teni15.jpg"},
     {
       idTeni: 16,
       marca: "Nike",
@@ -226,13 +226,13 @@ export const TENIS =
       fecha: "28-09-2021",
       valoracion: 3.5,
       stock: 8
-    ,imagen: "../resources/teni16.webp"},
+    ,imagen: "../resources/teni16.jpg"},
     {
       idTeni: 17,
-      marca: "Nike",
+      marca: "Puma",
       modelo: "Clyde",
       tipo: "Correr",
-      color: "Azul",
+      color: "Negro",
       talla: 12,
       genero: "Femenino",
       material: "Malla",
@@ -240,7 +240,7 @@ export const TENIS =
       fecha: "10-07-2024",
       valoracion: 4.2,
       stock: 27
-    ,imagen: "../resources/teni17.webp"},
+    ,imagen: "../resources/teni17.avif"},
     {
       idTeni: 18,
       marca: "New Balance",
@@ -526,7 +526,7 @@ export const TENIS =
       marca: "Paragon",
       modelo: "RS-X",
       tipo: "Correr",
-      color: "Gris",
+      color: "Negro",
       talla: 12,
       genero: "Masculino",
       material: "Sintético",
@@ -537,7 +537,7 @@ export const TENIS =
     ,imagen: "../resources/teni38.jpg"},
     {
       idTeni: 39,
-      marca: "Paragon",
+      marca: "Nike",
       modelo: "Air Max 90",
       tipo: "Senderismo",
       color: "Blanco",
@@ -554,7 +554,7 @@ export const TENIS =
       marca: "Nike",
       modelo: "Cali",
       tipo: "Entrenamiento",
-      color: "Azul",
+      color: "Blanco",
       talla: 7,
       genero: "Femenino",
       material: "Sintético",
@@ -579,7 +579,7 @@ export const TENIS =
     ,imagen: "../resources/teni41.webp"},
     {
       idTeni: 42,
-      marca: "Reebok",
+      marca: "Puma",
       modelo: "Suede Classic",
       tipo: "Entrenamiento",
       color: "Verde",
@@ -624,7 +624,7 @@ export const TENIS =
       marca: "Reebok",
       modelo: "Samba",
       tipo: "Senderismo",
-      color: "Azul",
+      color: "Blanco",
       talla: 5,
       genero: "Masculino",
       material: "Gamuza",
@@ -632,13 +632,13 @@ export const TENIS =
       fecha: "20-10-2024",
       valoracion: 4.1,
       stock: 20
-    ,imagen: "../resources/teni45.webp"},
+    ,imagen: "../resources/teni45.jpg"},
     {
       idTeni: 46,
       marca: "Sparx",
       modelo: "SS-421",
       tipo: "Correr",
-      color: "Negro",
+      color: "Azul",
       talla: 8,
       genero: "Femenino",
       material: "Malla",
@@ -666,7 +666,7 @@ export const TENIS =
       marca: "Reebok",
       modelo: "Comfit",
       tipo: "Correr",
-      color: "Gris",
+      color: "Blanco",
       talla: 9,
       genero: "Masculino",
       material: "Gamuza",
@@ -677,10 +677,10 @@ export const TENIS =
     ,imagen: "../resources/teni48.jpg"},
     {
       idTeni: 49,
-      marca: "Bata",
+      marca: "Adidas",
       modelo: "Yeezy Boost",
       tipo: "Baloncesto",
-      color: "Verde",
+      color: "Amarillo",
       talla: 6,
       genero: "Masculino",
       material: "Malla",
@@ -691,7 +691,7 @@ export const TENIS =
     ,imagen: "../resources/teni49.webp"},
     {
       idTeni: 50,
-      marca: "Paragon",
+      marca: "Adidas",
       modelo: "Ultraboost",
       tipo: "Entrenamiento",
       color: "Azul",
@@ -708,7 +708,7 @@ export const TENIS =
       marca: "Nike",
       modelo: "Cali",
       tipo: "Senderismo",
-      color: "Verde",
+      color: "Blanco",
       talla: 7,
       genero: "Masculino",
       material: "Tela",
@@ -744,7 +744,7 @@ export const TENIS =
       fecha: "11-04-2023",
       valoracion: 3.5,
       stock: 20
-    ,imagen: "../resources/teni53.webp"},
+    ,imagen: "../resources/teni53.jpg"},
     {
       idTeni: 54,
       marca: "Adidas",
