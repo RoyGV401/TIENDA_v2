@@ -12,11 +12,12 @@ export const TENIS =
       precio: 4700,
       fecha: "01-04-2022",
       valoracion: 3.5,
-      stock: 18
-    },
+      stock: 18,
+      imagen: "../resources/teni1.jpg"
+      },
     {
       idTeni: 2,
-      marca: "Paragon",
+      marca: "Adidas",
       modelo: "Gazelle",
       tipo: "Correr",
       color: "Blanco",
@@ -26,11 +27,12 @@ export const TENIS =
       precio: 7600,
       fecha: "13-03-2025",
       valoracion: 4.7,
-      stock: 4
+      stock: 4,
+      imagen: "../resources/tenis2.avif"
     },
     {
       idTeni: 3,
-      marca: "Sparx",
+      marca: "Adidas",
       modelo: "Stan Smith",
       tipo: "Baloncesto",
       color: "Verde",
@@ -40,7 +42,8 @@ export const TENIS =
       precio: 7100,
       fecha: "15-07-2022",
       valoracion: 3.1,
-      stock: 28
+      stock: 28,
+      imagen: "../resources/tenis3.avif"
     },
     {
       idTeni: 4,
@@ -55,7 +58,7 @@ export const TENIS =
       fecha: "25-08-2022",
       valoracion: 4.9,
       stock: 3
-    },
+    ,imagen: "../resources/teni4.webp"},
     {
       idTeni: 5,
       marca: "Reebok",
@@ -69,7 +72,7 @@ export const TENIS =
       fecha: "20-12-2024",
       valoracion: 3.7,
       stock: 11
-    },
+    ,imagen: "../resources/teni5.webp"},
     {
       idTeni: 6,
       marca: "Reebok",
@@ -83,7 +86,7 @@ export const TENIS =
       fecha: "20-08-2023",
       valoracion: 3.7,
       stock: 23
-    },
+    ,imagen: "../resources/teni6.webp"},
     {
       idTeni: 7,
       marca: "Reebok",
@@ -97,7 +100,7 @@ export const TENIS =
       fecha: "22-05-2021",
       valoracion: 3,
       stock: 6
-    },
+    ,imagen: "../resources/teni7.webp"},
     {
       idTeni: 8,
       marca: "Paragon",
@@ -111,7 +114,7 @@ export const TENIS =
       fecha: "03-03-2023",
       valoracion: 3.4,
       stock: 5
-    },
+    ,imagen: "../resources/teni8.webp"},
     {
       idTeni: 9,
       marca: "Adidas",
@@ -125,7 +128,7 @@ export const TENIS =
       fecha: "07-05-2024",
       valoracion: 3.8,
       stock: 15
-    },
+    ,imagen: "../resources/teni9.webp"},
     {
       idTeni: 10,
       marca: "Reebok",
@@ -139,7 +142,7 @@ export const TENIS =
       fecha: "21-12-2022",
       valoracion: 4.9,
       stock: 11
-    },
+    ,imagen: "../resources/teni10.webp"},
     {
       idTeni: 11,
       marca: "Sparx",
@@ -153,7 +156,7 @@ export const TENIS =
       fecha: "03-10-2023",
       valoracion: 3.2,
       stock: 10
-    },
+    ,imagen: "../resources/teni11.webp"},
     {
       idTeni: 12,
       marca: "Puma",
@@ -167,7 +170,7 @@ export const TENIS =
       fecha: "22-11-2023",
       valoracion: 4.9,
       stock: 18
-    },
+    ,imagen: "../resources/teni12.webp"},
     {
       idTeni: 13,
       marca: "New Balance",
@@ -181,7 +184,7 @@ export const TENIS =
       fecha: "10-01-2024",
       valoracion: 4.7,
       stock: 14
-    },
+    ,imagen: "../resources/teni13.webp"},
     {
       idTeni: 14,
       marca: "Paragon",
@@ -195,7 +198,7 @@ export const TENIS =
       fecha: "08-05-2021",
       valoracion: 3.9,
       stock: 12
-    },
+    ,imagen: "../resources/teni14.webp"},
     {
       idTeni: 15,
       marca: "Bata",
@@ -209,7 +212,7 @@ export const TENIS =
       fecha: "20-04-2024",
       valoracion: 3.7,
       stock: 28
-    },
+    ,imagen: "../resources/teni15.webp"},
     {
       idTeni: 16,
       marca: "Nike",
@@ -223,7 +226,7 @@ export const TENIS =
       fecha: "28-09-2021",
       valoracion: 3.5,
       stock: 8
-    },
+    ,imagen: "../resources/teni16.webp"},
     {
       idTeni: 17,
       marca: "Nike",
@@ -237,7 +240,7 @@ export const TENIS =
       fecha: "10-07-2024",
       valoracion: 4.2,
       stock: 27
-    },
+    ,imagen: "../resources/teni17.webp"},
     {
       idTeni: 18,
       marca: "New Balance",
@@ -251,7 +254,7 @@ export const TENIS =
       fecha: "28-01-2024",
       valoracion: 3.1,
       stock: 27
-    },
+    ,imagen: "../resources/teni18.webp"},
     {
       idTeni: 19,
       marca: "Puma",
@@ -265,7 +268,7 @@ export const TENIS =
       fecha: "23-02-2023",
       valoracion: 3,
       stock: 25
-    },
+    ,imagen: "../resources/teni19.webp"},
     {
       idTeni: 20,
       marca: "Adidas",
@@ -279,7 +282,7 @@ export const TENIS =
       fecha: "22-08-2021",
       valoracion: 3.9,
       stock: 3
-    },
+    ,imagen: "../resources/teni20.webp"},
     {
       idTeni: 21,
       marca: "Bata",
@@ -293,7 +296,7 @@ export const TENIS =
       fecha: "16-05-2022",
       valoracion: 3.1,
       stock: 16
-    },
+    ,imagen: "../resources/teni21.webp"},
     {
       idTeni: 22,
       marca: "Paragon",
@@ -307,7 +310,7 @@ export const TENIS =
       fecha: "17-05-2021",
       valoracion: 3.5,
       stock: 16
-    },
+    ,imagen: "../resources/teni22.webp"},
     {
       idTeni: 23,
       marca: "Paragon",
@@ -321,7 +324,7 @@ export const TENIS =
       fecha: "29-01-2022",
       valoracion: 3.4,
       stock: 28
-    },
+    ,imagen: "../resources/teni23.webp"},
     {
       idTeni: 24,
       marca: "Bata",
@@ -335,7 +338,7 @@ export const TENIS =
       fecha: "09-11-2022",
       valoracion: 3.5,
       stock: 10
-    },
+    ,imagen: "../resources/teni24.webp"},
     {
       idTeni: 25,
       marca: "Nike",
@@ -349,7 +352,7 @@ export const TENIS =
       fecha: "05-02-2024",
       valoracion: 3.3,
       stock: 18
-    },
+    ,imagen: "../resources/teni25.webp"},
     {
       idTeni: 26,
       marca: "Adidas",
@@ -363,7 +366,7 @@ export const TENIS =
       fecha: "25-03-2024",
       valoracion: 3,
       stock: 1
-    },
+    ,imagen: "../resources/teni26.webp"},
     {
       idTeni: 27,
       marca: "Sparx",
@@ -377,7 +380,7 @@ export const TENIS =
       fecha: "27-10-2023",
       valoracion: 3.2,
       stock: 15
-    },
+    ,imagen: "../resources/teni27.webp"},
     {
       idTeni: 28,
       marca: "Adidas",
@@ -391,7 +394,7 @@ export const TENIS =
       fecha: "08-03-2023",
       valoracion: 4.2,
       stock: 14
-    },
+    ,imagen: "../resources/teni28.webp"},
     {
       idTeni: 29,
       marca: "Sparx",
@@ -405,7 +408,7 @@ export const TENIS =
       fecha: "09-11-2021",
       valoracion: 4.9,
       stock: 14
-    },
+    ,imagen: "../resources/teni29.webp"},
     {
       idTeni: 30,
       marca: "Nike",
@@ -419,7 +422,7 @@ export const TENIS =
       fecha: "08-06-2021",
       valoracion: 5,
       stock: 28
-    },
+    ,imagen: "../resources/teni30.webp"},
     {
       idTeni: 31,
       marca: "Adidas",
@@ -433,7 +436,7 @@ export const TENIS =
       fecha: "06-03-2024",
       valoracion: 3.8,
       stock: 14
-    },
+    ,imagen: "../resources/teni31.webp"},
     {
       idTeni: 32,
       marca: "New Balance",
@@ -447,7 +450,7 @@ export const TENIS =
       fecha: "04-03-2021",
       valoracion: 3.3,
       stock: 26
-    },
+    ,imagen: "../resources/teni32.webp"},
     {
       idTeni: 33,
       marca: "Reebok",
@@ -461,7 +464,7 @@ export const TENIS =
       fecha: "28-09-2021",
       valoracion: 4.3,
       stock: 19
-    },
+    ,imagen: "../resources/teni33.webp"},
     {
       idTeni: 34,
       marca: "Nike",
@@ -475,7 +478,7 @@ export const TENIS =
       fecha: "23-06-2022",
       valoracion: 4,
       stock: 16
-    },
+    ,imagen: "../resources/teni34.webp"},
     {
       idTeni: 35,
       marca: "Reebok",
@@ -489,7 +492,7 @@ export const TENIS =
       fecha: "01-08-2021",
       valoracion: 5,
       stock: 10
-    },
+    ,imagen: "../resources/teni35.webp"},
     {
       idTeni: 36,
       marca: "Sparx",
@@ -503,7 +506,7 @@ export const TENIS =
       fecha: "07-03-2022",
       valoracion: 3.1,
       stock: 22
-    },
+    ,imagen: "../resources/teni36.webp"},
     {
       idTeni: 37,
       marca: "Bata",
@@ -517,7 +520,7 @@ export const TENIS =
       fecha: "16-04-2021",
       valoracion: 4.6,
       stock: 4
-    },
+    ,imagen: "../resources/teni37.webp"},
     {
       idTeni: 38,
       marca: "Paragon",
@@ -531,7 +534,7 @@ export const TENIS =
       fecha: "14-03-2023",
       valoracion: 3.6,
       stock: 1
-    },
+    ,imagen: "../resources/teni38.webp"},
     {
       idTeni: 39,
       marca: "Paragon",
@@ -545,7 +548,7 @@ export const TENIS =
       fecha: "29-09-2023",
       valoracion: 3.5,
       stock: 3
-    },
+    ,imagen: "../resources/teni39.webp"},
     {
       idTeni: 40,
       marca: "Nike",
@@ -559,7 +562,7 @@ export const TENIS =
       fecha: "04-03-2024",
       valoracion: 4.3,
       stock: 10
-    },
+    ,imagen: "../resources/teni40.webp"},
     {
       idTeni: 41,
       marca: "Puma",
@@ -573,7 +576,7 @@ export const TENIS =
       fecha: "14-04-2022",
       valoracion: 3.5,
       stock: 8
-    },
+    ,imagen: "../resources/teni41.webp"},
     {
       idTeni: 42,
       marca: "Reebok",
@@ -587,7 +590,7 @@ export const TENIS =
       fecha: "29-04-2023",
       valoracion: 4.3,
       stock: 8
-    },
+    ,imagen: "../resources/teni42.webp"},
     {
       idTeni: 43,
       marca: "Nike",
@@ -601,7 +604,7 @@ export const TENIS =
       fecha: "24-12-2024",
       valoracion: 4,
       stock: 8
-    },
+    ,imagen: "../resources/teni43.webp"},
     {
       idTeni: 44,
       marca: "Adidas",
@@ -615,7 +618,7 @@ export const TENIS =
       fecha: "21-05-2023",
       valoracion: 3.8,
       stock: 8
-    },
+    ,imagen: "../resources/teni44.webp"},
     {
       idTeni: 45,
       marca: "Reebok",
@@ -629,7 +632,7 @@ export const TENIS =
       fecha: "20-10-2024",
       valoracion: 4.1,
       stock: 20
-    },
+    ,imagen: "../resources/teni45.webp"},
     {
       idTeni: 46,
       marca: "Sparx",
@@ -643,7 +646,7 @@ export const TENIS =
       fecha: "24-01-2024",
       valoracion: 3.6,
       stock: 13
-    },
+    ,imagen: "../resources/teni46.webp"},
     {
       idTeni: 47,
       marca: "Reebok",
@@ -657,7 +660,7 @@ export const TENIS =
       fecha: "12-12-2023",
       valoracion: 4.4,
       stock: 13
-    },
+    ,imagen: "../resources/teni47.webp"},
     {
       idTeni: 48,
       marca: "Reebok",
@@ -671,7 +674,7 @@ export const TENIS =
       fecha: "03-02-2021",
       valoracion: 3.8,
       stock: 20
-    },
+    ,imagen: "../resources/teni48.webp"},
     {
       idTeni: 49,
       marca: "Bata",
@@ -685,7 +688,7 @@ export const TENIS =
       fecha: "21-05-2021",
       valoracion: 3.7,
       stock: 16
-    },
+    ,imagen: "../resources/teni49.webp"},
     {
       idTeni: 50,
       marca: "Paragon",
@@ -699,7 +702,7 @@ export const TENIS =
       fecha: "23-05-2021",
       valoracion: 4.7,
       stock: 29
-    },
+    ,imagen: "../resources/teni50.webp"},
     {
       idTeni: 51,
       marca: "Nike",
@@ -713,7 +716,7 @@ export const TENIS =
       fecha: "21-04-2022",
       valoracion: 4.8,
       stock: 25
-    },
+    ,imagen: "../resources/teni51.webp"},
     {
       idTeni: 52,
       marca: "Adidas",
@@ -727,7 +730,7 @@ export const TENIS =
       fecha: "18-03-2025",
       valoracion: 3.1,
       stock: 27
-    },
+    ,imagen: "../resources/teni52.webp"},
     {
       idTeni: 53,
       marca: "Adidas",
@@ -741,7 +744,7 @@ export const TENIS =
       fecha: "11-04-2023",
       valoracion: 3.5,
       stock: 20
-    },
+    ,imagen: "../resources/teni53.webp"},
     {
       idTeni: 54,
       marca: "Adidas",
@@ -755,7 +758,7 @@ export const TENIS =
       fecha: "28-06-2021",
       valoracion: 3.7,
       stock: 3
-    },
+    ,imagen: "../resources/teni54.webp"},
     {
       idTeni: 55,
       marca: "Paragon",
@@ -769,7 +772,7 @@ export const TENIS =
       fecha: "02-11-2022",
       valoracion: 4.6,
       stock: 2
-    },
+    ,imagen: "../resources/teni55.webp"},
     {
       idTeni: 56,
       marca: "Nike",
@@ -783,7 +786,7 @@ export const TENIS =
       fecha: "01-02-2024",
       valoracion: 5,
       stock: 28
-    },
+    ,imagen: "../resources/teni56.webp"},
     {
       idTeni: 57,
       marca: "Paragon",
@@ -797,7 +800,7 @@ export const TENIS =
       fecha: "04-04-2025",
       valoracion: 4.9,
       stock: 25
-    },
+    ,imagen: "../resources/teni57.webp"},
     {
       idTeni: 58,
       marca: "Puma",
@@ -811,7 +814,7 @@ export const TENIS =
       fecha: "28-11-2023",
       valoracion: 4.8,
       stock: 26
-    },
+    ,imagen: "../resources/teni58.webp"},
     {
       idTeni: 59,
       marca: "New Balance",
@@ -825,7 +828,7 @@ export const TENIS =
       fecha: "10-04-2023",
       valoracion: 3.6,
       stock: 9
-    },
+    ,imagen: "../resources/teni59.webp"},
     {
       idTeni: 60,
       marca: "Paragon",
@@ -839,7 +842,7 @@ export const TENIS =
       fecha: "14-03-2023",
       valoracion: 5,
       stock: 30
-    },
+    ,imagen: "../resources/teni60.webp"},
     {
       idTeni: 61,
       marca: "Reebok",
@@ -853,7 +856,7 @@ export const TENIS =
       fecha: "26-08-2023",
       valoracion: 3.5,
       stock: 7
-    },
+    ,imagen: "../resources/teni61.webp"},
     {
       idTeni: 62,
       marca: "Bata",
@@ -867,7 +870,7 @@ export const TENIS =
       fecha: "08-11-2021",
       valoracion: 3.2,
       stock: 3
-    },
+    ,imagen: "../resources/teni62.webp"},
     {
       idTeni: 63,
       marca: "Reebok",
@@ -881,7 +884,7 @@ export const TENIS =
       fecha: "15-01-2024",
       valoracion: 4.9,
       stock: 2
-    },
+    ,imagen: "../resources/teni63.webp"},
     {
       idTeni: 64,
       marca: "Puma",
@@ -895,7 +898,7 @@ export const TENIS =
       fecha: "18-08-2023",
       valoracion: 3.5,
       stock: 13
-    },
+    ,imagen: "../resources/teni64.webp"},
     {
       idTeni: 65,
       marca: "Paragon",
@@ -909,7 +912,7 @@ export const TENIS =
       fecha: "25-04-2023",
       valoracion: 4.4,
       stock: 17
-    },
+    ,imagen: "../resources/teni65.webp"},
     {
       idTeni: 66,
       marca: "New Balance",
@@ -923,7 +926,7 @@ export const TENIS =
       fecha: "15-10-2021",
       valoracion: 3.1,
       stock: 7
-    },
+    ,imagen: "../resources/teni66.webp"},
     {
       idTeni: 67,
       marca: "Puma",
@@ -937,7 +940,7 @@ export const TENIS =
       fecha: "17-12-2021",
       valoracion: 4.5,
       stock: 12
-    },
+    ,imagen: "../resources/teni67.webp"},
     {
       idTeni: 68,
       marca: "Nike",
@@ -951,7 +954,7 @@ export const TENIS =
       fecha: "16-01-2021",
       valoracion: 4.8,
       stock: 6
-    },
+    ,imagen: "../resources/teni68.webp"},
     {
       idTeni: 69,
       marca: "Nike",
@@ -965,7 +968,7 @@ export const TENIS =
       fecha: "20-07-2024",
       valoracion: 3.5,
       stock: 29
-    },
+    ,imagen: "../resources/teni69.webp"},
     {
       idTeni: 70,
       marca: "New Balance",
