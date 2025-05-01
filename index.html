@@ -45,6 +45,7 @@
             </div>
         </nav>
         <!-- Header-->
+         
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
@@ -54,15 +55,55 @@
             </div>
         </header>
         <!-- Section-->
+         
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
+                <div id="filtros" class="row row-cols-2 row-cols-md-3 row-cols-xl-4 m-5 justify-content-start">
+                  <div class="dropdown">
+                  
+                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Filtrar
+                    </button>
+                        
+                       <ul class="dropdown-menu m-3 p-2" id="filterList" aria-labelledby="dropdownMenuButton1">
+                        <p class="h6 fw-bold">Color</p>
+                        <div id="filtrosColor">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="filerColor" id="radioColor1" checked>
+                              <label class="form-check-label" for="radioColor1">
+                                Ninguno
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="filerColor" id="radioColor2">
+                              <label class="form-check-label" for="radioColor2">
+                                ---
+                              </label>
+                            </div>
+                        </div>
+
+                        <p class="h6 fw-bold">Marca</p>
+                        <div id="filtrosMarca">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="filterBrand" id="radioBrand1" checked>
+                            <label class="form-check-label" for="radioBrand1">
+                              Ninguno
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="filterBrand" id="radioBrand2">
+                            <label class="form-check-label" for="radioBrand2">
+                              ---
+                            </label>
+                          </div>
+                      </div>
+                      </ul>
+                   
+                  </div>
+                </div>
+               
                 <div id="contenedor" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    
-                    
-                    
-                    
-                    
-                    
+
                 </div>
             </div>
         </section>

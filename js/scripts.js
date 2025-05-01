@@ -11,18 +11,43 @@ import { TENIS } from "./src/tenis.js";
 
 const tenis = TENIS;
 
+const brands = getBrands();
+const colors = getColors();
 
+const FILTERS = {
+    color:undefined,
+    brand:undefined
+}
 
 var carrito = [];
 
 window.onload = function(){
 
-    onloading();
+    loadShoes();
+    loadFilters();
 }
 
-function onloading(){
 
-    tenis.forEach(t => {
+
+function loadShoes(){
+
+    let toSearch = tenis;
+    
+    if (FILTERS.color != undefined)
+    {
+        toSearch = toSearch.filter((s) => s.color == FILTERS.color);
+    }
+
+    if (FILTERS.brand != undefined)
+    {
+        toSearch = toSearch.filter((s) => s.marca == FILTERS.brand);
+    }
+
+    document.getElementById("contenedor").innerHTML = "";
+    
+    toSearch.forEach(t => {
+
+        
       
         document.getElementById("contenedor").innerHTML += `
             <div class="col mb-5">
@@ -55,3 +80,97 @@ function onloading(){
 
 }
 
+function loadFilters()
+{
+    let i = 0;
+    const filterDiv = document.getElementById('filtrosColor');
+    filterDiv.innerHTML = `
+                        <div class="form-check">
+                              <input class="form-check-input" type="radio" name="filterColor" id="radioColorNone" checked>
+                              <label class="form-check-label" for="radioColor">
+                                ---
+                              </label>
+                            </div>
+                  
+    `;
+    colors.forEach(c => {
+        i++;
+        filterDiv.innerHTML += `
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="filterColor" id="radioColor${i}">
+                              <label class="form-check-label" for="radioColor${i}">
+                                ${c}
+                              </label>
+                            </div>
+                            `;
+    });
+
+    i = 0;
+    const brandDiv = document.getElementById('filtrosMarca');
+    brandDiv.innerHTML = `
+                        <div class="form-check">
+                              <input class="form-check-input" type="radio" name="filterBrand" id="radioBrandNone" checked>
+                              <label class="form-check-label" for="radioBrand">
+                                ---
+                              </label>
+                            </div>
+                  
+    `;
+    brands.forEach(c => {
+        i++;
+        brandDiv.innerHTML += `
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="filterBrand" id="radioBrand${i}">
+                              <label class="form-check-label" for="radioBrand${i}">
+                                ${c}
+                              </label>
+                            </div>
+                            `;
+    });
+
+    brandDiv.addEventListener("focusout", (event) => {
+        const selectedRadio = document.querySelector('input[name="filterBrand"]:checked');
+        const value = selectedRadio.nextElementSibling.textContent.trim();
+        if (value != "---")
+        {
+            FILTERS.brand = value;
+        }
+        else
+        {
+            FILTERS.brand = undefined;
+        }
+        loadShoes();
+    });
+
+    filterDiv.addEventListener("focusout", (event) => {
+        const selectedRadio = document.querySelector('input[name="filterColor"]:checked');
+        const value = selectedRadio.nextElementSibling.textContent.trim();
+        if (value != "---")
+        {
+            FILTERS.color = value;
+        }
+        else
+        {
+            FILTERS.color = undefined;
+        }
+        loadShoes();
+    });
+}
+
+function getBrands()
+{
+    const result = [];
+    tenis.forEach(t => {
+        if (!result.includes(t.marca)) result.push(t.marca);
+    });
+    return result;
+}
+
+function getColors()
+{
+    const result = [];
+    tenis.forEach(t => {
+        if (!result.includes(t.color)) result.push(t.color);
+    });
+    return result;
+}
