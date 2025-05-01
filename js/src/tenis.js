@@ -520,7 +520,7 @@ export const TENIS =
       fecha: "16-04-2021",
       valoracion: 4.6,
       stock: 4
-    ,imagen: "../resources/teni37.webp"},
+    ,imagen: "../resources/teni37.jpg"},
     {
       idTeni: 38,
       marca: "Paragon",
@@ -534,7 +534,7 @@ export const TENIS =
       fecha: "14-03-2023",
       valoracion: 3.6,
       stock: 1
-    ,imagen: "../resources/teni38.webp"},
+    ,imagen: "../resources/teni38.jpg"},
     {
       idTeni: 39,
       marca: "Paragon",
@@ -562,7 +562,7 @@ export const TENIS =
       fecha: "04-03-2024",
       valoracion: 4.3,
       stock: 10
-    ,imagen: "../resources/teni40.webp"},
+    ,imagen: "../resources/teni40.avif"},
     {
       idTeni: 41,
       marca: "Puma",
@@ -590,7 +590,7 @@ export const TENIS =
       fecha: "29-04-2023",
       valoracion: 4.3,
       stock: 8
-    ,imagen: "../resources/teni42.webp"},
+    ,imagen: "../resources/teni42.jpg"},
     {
       idTeni: 43,
       marca: "Nike",
@@ -660,7 +660,7 @@ export const TENIS =
       fecha: "12-12-2023",
       valoracion: 4.4,
       stock: 13
-    ,imagen: "../resources/teni47.webp"},
+    ,imagen: "../resources/teni47.avif"},
     {
       idTeni: 48,
       marca: "Reebok",
@@ -674,7 +674,7 @@ export const TENIS =
       fecha: "03-02-2021",
       valoracion: 3.8,
       stock: 20
-    ,imagen: "../resources/teni48.webp"},
+    ,imagen: "../resources/teni48.jpg"},
     {
       idTeni: 49,
       marca: "Bata",
@@ -702,7 +702,7 @@ export const TENIS =
       fecha: "23-05-2021",
       valoracion: 4.7,
       stock: 29
-    ,imagen: "../resources/teni50.webp"},
+    ,imagen: "../resources/teni50.avif"},
     {
       idTeni: 51,
       marca: "Nike",
@@ -716,7 +716,7 @@ export const TENIS =
       fecha: "21-04-2022",
       valoracion: 4.8,
       stock: 25
-    ,imagen: "../resources/teni51.webp"},
+    ,imagen: "../resources/teni51.avif"},
     {
       idTeni: 52,
       marca: "Adidas",
@@ -730,7 +730,7 @@ export const TENIS =
       fecha: "18-03-2025",
       valoracion: 3.1,
       stock: 27
-    ,imagen: "../resources/teni52.webp"},
+    ,imagen: "../resources/teni52.jpg"},
     {
       idTeni: 53,
       marca: "Adidas",
