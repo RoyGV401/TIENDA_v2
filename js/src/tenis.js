@@ -1,986 +1,1122 @@
-export const TENIS = 
-[
-    {
-      idTeni: 1,
-      marca: "New Balance",
-      modelo: "NMD",
-      tipo: "Entrenamiento",
-      color: "Azul",
-      talla: 10,
-      genero: "Femenino",
-      material: "Cuero",
-      precio: 4700,
-      fecha: "01-04-2022",
-      valoracion: 3.5,
-      stock: 18,
-      imagen: "../resources/teni1.jpg"
-      },
-    {
-      idTeni: 2,
-      marca: "Adidas",
-      modelo: "Gazelle",
-      tipo: "Correr",
-      color: "Blanco",
-      talla: 11,
-      genero: "Femenino",
-      material: "Gamuza",
-      precio: 7600,
-      fecha: "13-03-2025",
-      valoracion: 4.7,
-      stock: 4,
-      imagen: "../resources/tenis2.avif"
+export const TENIS = [
+  {
+    idTeni: 1,
+    marca: "New Balance",
+    modelo: "NMD",
+    color: "Azul",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
     },
-    {
-      idTeni: 3,
-      marca: "Adidas",
-      modelo: "Stan Smith",
-      tipo: "Baloncesto",
-      color: "Verde",
-      talla: 10,
-      genero: "Masculino",
-      material: "Cuero",
-      precio: 7100,
-      fecha: "15-07-2022",
-      valoracion: 3.1,
-      stock: 28,
-      imagen: "../resources/tenis3.avif"
+    precio: 4700,
+    fecha: "01-04-2022",
+    valoracion: 3.5,
+    stock: 18,
+    imagen: "../resources/teni1.jpg"
+ },
+  {
+    idTeni: 2,
+    marca: "Adidas",
+    modelo: "Gazelle",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
     },
-    {
-      idTeni: 4,
-      marca: "Nike",
-      modelo: "Zoom Fly",
-      tipo: "Senderismo",
-      color: "Verde",
-      talla: 6,
-      genero: "Femenino",
-      material: "Sintético",
-      precio: 9500,
-      fecha: "25-08-2022",
-      valoracion: 4.9,
-      stock: 3
-    ,imagen: "../resources/teni4.avif"},
-    {
-      idTeni: 5,
-      marca: "Reebok",
-      modelo: "Max",
-      tipo: "Baloncesto",
-      color: "Verde",
-      talla: 6,
-      genero: "Masculino",
-      material: "Sintético",
-      precio: 12200,
-      fecha: "20-12-2024",
-      valoracion: 3.7,
-      stock: 11
-    ,imagen: "../resources/teni5.jpg"},
-    {
-      idTeni: 6,
-      marca: "Adidas",
-      modelo: "Ultraboost",
-      tipo: "Correr",
-      color: "Negro",
-      talla: 7,
-      genero: "Femenino",
-      material: "Sintético",
-      precio: 12300,
-      fecha: "20-08-2023",
-      valoracion: 3.7,
-      stock: 23
-    ,imagen: "../resources/teni6.jpg"},
-    {
-      idTeni: 7,
-      marca: "Reebok",
-      modelo: "Ultraboost",
-      tipo: "Baloncesto",
-      color: "Gris",
-      talla: 5,
-      genero: "Masculino",
-      material: "Malla",
-      precio: 7400,
-      fecha: "22-05-2021",
-      valoracion: 3,
-      stock: 6
-    ,imagen: "../resources/teni7.webp"},
-    {
-      idTeni: 8,
-      marca: "Adidas",
-      modelo: "Ignite",
-      tipo: "Senderismo",
-      color: "Azul",
-      talla: 8,
-      genero: "Masculino",
-      material: "Malla",
-      precio: 8600,
-      fecha: "03-03-2023",
-      valoracion: 3.4,
-      stock: 5
-    ,imagen: "../resources/teni8.jpg"},
-    {
-      idTeni: 9,
-      marca: "Adidas",
-      modelo: "Samba",
-      tipo: "Casual",
-      color: "Azul",
-      talla: 6,
-      genero: "Masculino",
-      material: "Gamuza",
-      precio: 6200,
-      fecha: "07-05-2024",
-      valoracion: 3.8,
-      stock: 15
-    ,imagen: "../resources/teni9.webp"},
-    {
-      idTeni: 10,
-      marca: "Reebok",
-      modelo: "Comfit",
-      tipo: "Casual",
-      color: "Blanco",
-      talla: 9,
-      genero: "Masculino",
-      material: "Malla",
-      precio: 13500,
-      fecha: "21-12-2022",
-      valoracion: 4.9,
-      stock: 11
-    ,imagen: "../resources/teni10.jpg"},
-    {
-      idTeni: 11,
-      marca: "Sparx",
-      modelo: "Air Max 90",
-      tipo: "Casual",
-      color: "Negro",
-      talla: 8,
-      genero: "Femenino",
-      material: "Malla",
-      precio: 4700,
-      fecha: "03-10-2023",
-      valoracion: 3.2,
-      stock: 10
-    ,imagen: "../resources/teni11.webp"},
-    {
-      idTeni: 12,
-      marca: "Adidas",
-      modelo: "Yeezy Boost",
-      tipo: "Senderismo",
-      color: "Negro",
-      talla: 6,
-      genero: "Femenino",
-      material: "Tela",
-      precio: 12400,
-      fecha: "22-11-2023",
-      valoracion: 4.9,
-      stock: 18
-    ,imagen: "../resources/teni12.webp"},
-    {
-      idTeni: 13,
-      marca: "Puma",
-      modelo: "Future Rider",
-      tipo: "Correr",
-      color: "Rojo",
-      talla: 6,
-      genero: "Femenino",
-      material: "Malla",
-      precio: 13300,
-      fecha: "10-01-2024",
-      valoracion: 4.7,
-      stock: 14
-    ,imagen: "../resources/teni13.jpg"},
-    {
-      idTeni: 14,
-      marca: "Skechers",
-      modelo: "UNO",
-      tipo: "Correr",
-      color: "Azul",
-      talla: 7,
-      genero: "Femenino",
-      material: "Tela",
-      precio: 13300,
-      fecha: "08-05-2021",
-      valoracion: 3.9,
-      stock: 12
-    ,imagen: "../resources/teni14.webp"},
-    {
-      idTeni: 15,
-      marca: "Bata",
-      modelo: "Power",
-      tipo: "Correr",
-      color: "Rojo",
-      talla: 5,
-      genero: "Femenino",
-      material: "Tela",
-      precio: 7100,
-      fecha: "20-04-2024",
-      valoracion: 3.7,
-      stock: 28
-    ,imagen: "../resources/teni15.jpg"},
-    {
-      idTeni: 16,
-      marca: "Nike",
-      modelo: "Zoom Fly",
-      tipo: "Casual",
-      color: "Blanco",
-      talla: 11,
-      genero: "Masculino",
-      material: "Malla",
-      precio: 8500,
-      fecha: "28-09-2021",
-      valoracion: 3.5,
-      stock: 8
-    ,imagen: "../resources/teni16.jpg"},
-    {
-      idTeni: 17,
-      marca: "Puma",
-      modelo: "Clyde",
-      tipo: "Correr",
-      color: "Negro",
-      talla: 12,
-      genero: "Femenino",
-      material: "Malla",
-      precio: 11100,
-      fecha: "10-07-2024",
-      valoracion: 4.2,
-      stock: 27
-    ,imagen: "../resources/teni17.avif"},
-    {
-      idTeni: 18,
-      marca: "New Balance",
-      modelo: "Zoom Fly",
-      tipo: "Baloncesto",
-      color: "Verde",
-      talla: 5,
-      genero: "Masculino",
-      material: "Malla",
-      precio: 7300,
-      fecha: "28-01-2024",
-      valoracion: 3.1,
-      stock: 27
-    ,imagen: "../resources/teni18.webp"},
-    {
-      idTeni: 19,
-      marca: "Puma",
-      modelo: "Classic Leather",
-      tipo: "Casual",
-      color: "Amarillo",
-      talla: 7,
-      genero: "Femenino",
-      material: "Cuero",
-      precio: 8500,
-      fecha: "23-02-2023",
-      valoracion: 3,
-      stock: 25
-    ,imagen: "../resources/teni19.webp"},
-    {
-      idTeni: 20,
-      marca: "Adidas",
-      modelo: "Future Rider",
-      tipo: "Senderismo",
-      color: "Verde",
-      talla: 9,
-      genero: "Masculino",
-      material: "Tela",
-      precio: 6400,
-      fecha: "22-08-2021",
-      valoracion: 3.9,
-      stock: 3
-    ,imagen: "../resources/teni20.webp"},
-    {
-      idTeni: 21,
-      marca: "Bata",
-      modelo: "Yeezy Boost",
-      tipo: "Casual",
-      color: "Amarillo",
-      talla: 11,
-      genero: "Femenino",
-      material: "Cuero",
-      precio: 9500,
-      fecha: "16-05-2022",
-      valoracion: 3.1,
-      stock: 16
-    ,imagen: "../resources/teni21.webp"},
-    {
-      idTeni: 22,
-      marca: "Paragon",
-      modelo: "Stan Smith",
-      tipo: "Correr",
-      color: "Rojo",
-      talla: 5,
-      genero: "Masculino",
-      material: "Sintético",
-      precio: 4500,
-      fecha: "17-05-2021",
-      valoracion: 3.5,
-      stock: 16
-    ,imagen: "../resources/teni22.webp"},
-    {
-      idTeni: 23,
-      marca: "Paragon",
-      modelo: "SS-421",
-      tipo: "Correr",
-      color: "Amarillo",
-      talla: 9,
-      genero: "Femenino",
-      material: "Malla",
-      precio: 13600,
-      fecha: "29-01-2022",
-      valoracion: 3.4,
-      stock: 28
-    ,imagen: "../resources/teni23.webp"},
-    {
-      idTeni: 24,
-      marca: "Bata",
-      modelo: "SM-162",
-      tipo: "Baloncesto",
-      color: "Rojo",
-      talla: 12,
-      genero: "Femenino",
-      material: "Sintético",
-      precio: 4900,
-      fecha: "09-11-2022",
-      valoracion: 3.5,
-      stock: 10
-    ,imagen: "../resources/teni24.webp"},
-    {
-      idTeni: 25,
-      marca: "Nike",
-      modelo: "Stan Smith",
-      tipo: "Senderismo",
-      color: "Verde",
-      talla: 8,
-      genero: "Masculino",
-      material: "Cuero",
-      precio: 10200,
-      fecha: "05-02-2024",
-      valoracion: 3.3,
-      stock: 18
-    ,imagen: "../resources/teni25.webp"},
-    {
-      idTeni: 26,
-      marca: "Adidas",
-      modelo: "Thunder Spectra",
-      tipo: "Senderismo",
-      color: "Negro",
-      talla: 8,
-      genero: "Masculino",
-      material: "Tela",
-      precio: 7700,
-      fecha: "25-03-2024",
-      valoracion: 3,
-      stock: 1
-    ,imagen: "../resources/teni26.webp"},
-    {
-      idTeni: 27,
-      marca: "Sparx",
-      modelo: "SF-871",
-      tipo: "Casual",
-      color: "Negro",
-      talla: 5,
-      genero: "Masculino",
-      material: "Gamuza",
-      precio: 10900,
-      fecha: "27-10-2023",
-      valoracion: 3.2,
-      stock: 15
-    ,imagen: "../resources/teni27.webp"},
-    {
-      idTeni: 28,
-      marca: "Adidas",
-      modelo: "NMD",
-      tipo: "Correr",
-      color: "Rojo",
-      talla: 5,
-      genero: "Femenino",
-      material: "Malla",
-      precio: 15500,
-      fecha: "08-03-2023",
-      valoracion: 4.2,
-      stock: 14
-    ,imagen: "../resources/teni28.webp"},
-    {
-      idTeni: 29,
-      marca: "Sparx",
-      modelo: "Air Max 90",
-      tipo: "Correr",
-      color: "Blanco",
-      talla: 8,
-      genero: "Femenino",
-      material: "Sintético",
-      precio: 11700,
-      fecha: "09-11-2021",
-      valoracion: 4.9,
-      stock: 14
-    ,imagen: "../resources/teni29.webp"},
-    {
-      idTeni: 30,
-      marca: "Nike",
-      modelo: "Max",
-      tipo: "Casual",
-      color: "Rojo",
-      talla: 10,
-      genero: "Femenino",
-      material: "Sintético",
-      precio: 4400,
-      fecha: "08-06-2021",
-      valoracion: 5,
-      stock: 28
-    ,imagen: "../resources/teni30.webp"},
-    {
-      idTeni: 31,
-      marca: "Adidas",
-      modelo: "NMD",
-      tipo: "Entrenamiento",
-      color: "Blanco",
-      talla: 8,
-      genero: "Masculino",
-      material: "Sintético",
-      precio: 9200,
-      fecha: "06-03-2024",
-      valoracion: 3.8,
-      stock: 14
-    ,imagen: "../resources/teni31.webp"},
-    {
-      idTeni: 32,
-      marca: "New Balance",
-      modelo: "Vertex",
-      tipo: "Correr",
-      color: "Rojo",
-      talla: 11,
-      genero: "Masculino",
-      material: "Cuero",
-      precio: 10100,
-      fecha: "04-03-2021",
-      valoracion: 3.3,
-      stock: 26
-    ,imagen: "../resources/teni32.webp"},
-    {
-      idTeni: 33,
-      marca: "Reebok",
-      modelo: "Air Max 90",
-      tipo: "Senderismo",
-      color: "Gris",
-      talla: 12,
-      genero: "Femenino",
-      material: "Cuero",
-      precio: 10400,
-      fecha: "28-09-2021",
-      valoracion: 4.3,
-      stock: 19
-    ,imagen: "../resources/teni33.webp"},
-    {
-      idTeni: 34,
-      marca: "Nike",
-      modelo: "Stimulus",
-      tipo: "Casual",
-      color: "Gris",
-      talla: 5,
-      genero: "Masculino",
-      material: "Gamuza",
-      precio: 12200,
-      fecha: "23-06-2022",
-      valoracion: 4,
-      stock: 16
-    ,imagen: "../resources/teni34.webp"},
-    {
-      idTeni: 35,
-      marca: "Reebok",
-      modelo: "Classic Leather",
-      tipo: "Casual",
-      color: "Rojo",
-      talla: 8,
-      genero: "Masculino",
-      material: "Cuero",
-      precio: 7300,
-      fecha: "01-08-2021",
-      valoracion: 5,
-      stock: 10
-    ,imagen: "../resources/teni35.webp"},
-    {
-      idTeni: 36,
-      marca: "Sparx",
-      modelo: "Thunder Spectra",
-      tipo: "Baloncesto",
-      color: "Negro",
-      talla: 5,
-      genero: "Femenino",
-      material: "Tela",
-      precio: 5500,
-      fecha: "07-03-2022",
-      valoracion: 3.1,
-      stock: 22
-    ,imagen: "../resources/teni36.webp"},
-    {
-      idTeni: 37,
-      marca: "Bata",
-      modelo: "SF-871",
-      tipo: "Correr",
-      color: "Blanco",
-      talla: 12,
-      genero: "Masculino",
-      material: "Tela",
-      precio: 8700,
-      fecha: "16-04-2021",
-      valoracion: 4.6,
-      stock: 4
-    ,imagen: "../resources/teni37.jpg"},
-    {
-      idTeni: 38,
-      marca: "Paragon",
-      modelo: "RS-X",
-      tipo: "Correr",
-      color: "Negro",
-      talla: 12,
-      genero: "Masculino",
-      material: "Sintético",
-      precio: 15500,
-      fecha: "14-03-2023",
-      valoracion: 3.6,
-      stock: 1
-    ,imagen: "../resources/teni38.jpg"},
-    {
-      idTeni: 39,
-      marca: "Nike",
-      modelo: "Air Max 90",
-      tipo: "Senderismo",
-      color: "Blanco",
-      talla: 10,
-      genero: "Masculino",
-      material: "Malla",
-      precio: 6200,
-      fecha: "29-09-2023",
-      valoracion: 3.5,
-      stock: 3
-    ,imagen: "../resources/teni39.webp"},
-    {
-      idTeni: 40,
-      marca: "Nike",
-      modelo: "Cali",
-      tipo: "Entrenamiento",
-      color: "Blanco",
-      talla: 7,
-      genero: "Femenino",
-      material: "Sintético",
-      precio: 14800,
-      fecha: "04-03-2024",
-      valoracion: 4.3,
-      stock: 10
-    ,imagen: "../resources/teni40.avif"},
-    {
-      idTeni: 41,
-      marca: "Puma",
-      modelo: "SM-162",
-      tipo: "Senderismo",
-      color: "Amarillo",
-      talla: 6,
-      genero: "Masculino",
-      material: "Tela",
-      precio: 10500,
-      fecha: "14-04-2022",
-      valoracion: 3.5,
-      stock: 8
-    ,imagen: "../resources/teni41.webp"},
-    {
-      idTeni: 42,
-      marca: "Puma",
-      modelo: "Suede Classic",
-      tipo: "Entrenamiento",
-      color: "Verde",
-      talla: 5,
-      genero: "Femenino",
-      material: "Tela",
-      precio: 9500,
-      fecha: "29-04-2023",
-      valoracion: 4.3,
-      stock: 8
-    ,imagen: "../resources/teni42.jpg"},
-    {
-      idTeni: 43,
-      marca: "Nike",
-      modelo: "Vertex",
-      tipo: "Baloncesto",
-      color: "Negro",
-      talla: 9,
-      genero: "Masculino",
-      material: "Tela",
-      precio: 14600,
-      fecha: "24-12-2024",
-      valoracion: 4,
-      stock: 8
-    ,imagen: "../resources/teni43.webp"},
-    {
-      idTeni: 44,
-      marca: "Adidas",
-      modelo: "Classic Leather",
-      tipo: "Senderismo",
-      color: "Negro",
-      talla: 12,
-      genero: "Femenino",
-      material: "Sintético",
-      precio: 9500,
-      fecha: "21-05-2023",
-      valoracion: 3.8,
-      stock: 8
-    ,imagen: "../resources/teni44.webp"},
-    {
-      idTeni: 45,
-      marca: "Reebok",
-      modelo: "Samba",
-      tipo: "Senderismo",
-      color: "Blanco",
-      talla: 5,
-      genero: "Masculino",
-      material: "Gamuza",
-      precio: 12700,
-      fecha: "20-10-2024",
-      valoracion: 4.1,
-      stock: 20
-    ,imagen: "../resources/teni45.jpg"},
-    {
-      idTeni: 46,
-      marca: "Sparx",
-      modelo: "SS-421",
-      tipo: "Correr",
-      color: "Azul",
-      talla: 8,
-      genero: "Femenino",
-      material: "Malla",
-      precio: 8800,
-      fecha: "24-01-2024",
-      valoracion: 3.6,
-      stock: 13
-    ,imagen: "../resources/teni46.webp"},
-    {
-      idTeni: 47,
-      marca: "Reebok",
-      modelo: "Gazelle",
-      tipo: "Senderismo",
-      color: "Verde",
-      talla: 9,
-      genero: "Femenino",
-      material: "Gamuza",
-      precio: 14800,
-      fecha: "12-12-2023",
-      valoracion: 4.4,
-      stock: 13
-    ,imagen: "../resources/teni47.avif"},
-    {
-      idTeni: 48,
-      marca: "Reebok",
-      modelo: "Comfit",
-      tipo: "Correr",
-      color: "Blanco",
-      talla: 9,
-      genero: "Masculino",
-      material: "Gamuza",
-      precio: 12300,
-      fecha: "03-02-2021",
-      valoracion: 3.8,
-      stock: 20
-    ,imagen: "../resources/teni48.jpg"},
-    {
-      idTeni: 49,
-      marca: "Adidas",
-      modelo: "Yeezy Boost",
-      tipo: "Baloncesto",
-      color: "Amarillo",
-      talla: 6,
-      genero: "Masculino",
-      material: "Malla",
-      precio: 12400,
-      fecha: "21-05-2021",
-      valoracion: 3.7,
-      stock: 16
-    ,imagen: "../resources/teni49.webp"},
-    {
-      idTeni: 50,
-      marca: "Adidas",
-      modelo: "Ultraboost",
-      tipo: "Entrenamiento",
-      color: "Azul",
-      talla: 5,
-      genero: "Femenino",
-      material: "Tela",
-      precio: 7900,
-      fecha: "23-05-2021",
-      valoracion: 4.7,
-      stock: 29
-    ,imagen: "../resources/teni50.avif"},
-    {
-      idTeni: 51,
-      marca: "Nike",
-      modelo: "Cali",
-      tipo: "Senderismo",
-      color: "Blanco",
-      talla: 7,
-      genero: "Masculino",
-      material: "Tela",
-      precio: 13100,
-      fecha: "21-04-2022",
-      valoracion: 4.8,
-      stock: 25
-    ,imagen: "../resources/teni51.avif"},
-    {
-      idTeni: 52,
-      marca: "Adidas",
-      modelo: "SL-147",
-      tipo: "Baloncesto",
-      color: "Verde",
-      talla: 11,
-      genero: "Femenino",
-      material: "Sintético",
-      precio: 11600,
-      fecha: "18-03-2025",
-      valoracion: 3.1,
-      stock: 27
-    ,imagen: "../resources/teni52.jpg"},
-    {
-      idTeni: 53,
-      marca: "Adidas",
-      modelo: "Ignite",
-      tipo: "Correr",
-      color: "Gris",
-      talla: 11,
-      genero: "Masculino",
-      material: "Sintético",
-      precio: 6900,
-      fecha: "11-04-2023",
-      valoracion: 3.5,
-      stock: 20
-    ,imagen: "../resources/teni53.jpg"},
-    {
-      idTeni: 54,
-      marca: "Adidas",
-      modelo: "Suede Classic",
-      tipo: "Entrenamiento",
-      color: "Gris",
-      talla: 9,
-      genero: "Femenino",
-      material: "Gamuza",
-      precio: 5900,
-      fecha: "28-06-2021",
-      valoracion: 3.7,
-      stock: 3
-    ,imagen: "../resources/teni54.webp"},
-    {
-      idTeni: 55,
-      marca: "Paragon",
-      modelo: "Superstar",
-      tipo: "Senderismo",
-      color: "Verde",
-      talla: 9,
-      genero: "Masculino",
-      material: "Malla",
-      precio: 13600,
-      fecha: "02-11-2022",
-      valoracion: 4.6,
-      stock: 2
-    ,imagen: "../resources/teni55.webp"},
-    {
-      idTeni: 56,
-      marca: "Nike",
-      modelo: "Astro",
-      tipo: "Senderismo",
-      color: "Verde",
-      talla: 7,
-      genero: "Masculino",
-      material: "Malla",
-      precio: 15500,
-      fecha: "01-02-2024",
-      valoracion: 5,
-      stock: 28
-    ,imagen: "../resources/teni56.webp"},
-    {
-      idTeni: 57,
-      marca: "Paragon",
-      modelo: "Air Max 90",
-      tipo: "Casual",
-      color: "Azul",
-      talla: 9,
-      genero: "Masculino",
-      material: "Cuero",
-      precio: 9500,
-      fecha: "04-04-2025",
-      valoracion: 4.9,
-      stock: 25
-    ,imagen: "../resources/teni57.webp"},
-    {
-      idTeni: 58,
-      marca: "Puma",
-      modelo: "SM-306",
-      tipo: "Senderismo",
-      color: "Blanco",
-      talla: 11,
-      genero: "Masculino",
-      material: "Cuero",
-      precio: 11100,
-      fecha: "28-11-2023",
-      valoracion: 4.8,
-      stock: 26
-    ,imagen: "../resources/teni58.webp"},
-    {
-      idTeni: 59,
-      marca: "New Balance",
-      modelo: "Thunder Spectra",
-      tipo: "Baloncesto",
-      color: "Verde",
-      talla: 8,
-      genero: "Femenino",
-      material: "Gamuza",
-      precio: 14300,
-      fecha: "10-04-2023",
-      valoracion: 3.6,
-      stock: 9
-    ,imagen: "../resources/teni59.webp"},
-    {
-      idTeni: 60,
-      marca: "Paragon",
-      modelo: "Vertex",
-      tipo: "Senderismo",
-      color: "Blanco",
-      talla: 7,
-      genero: "Femenino",
-      material: "Sintético",
-      precio: 9500,
-      fecha: "14-03-2023",
-      valoracion: 5,
-      stock: 30
-    ,imagen: "../resources/teni60.webp"},
-    {
-      idTeni: 61,
-      marca: "Reebok",
-      modelo: "Power",
-      tipo: "Senderismo",
-      color: "Amarillo",
-      talla: 8,
-      genero: "Masculino",
-      material: "Tela",
-      precio: 15400,
-      fecha: "26-08-2023",
-      valoracion: 3.5,
-      stock: 7
-    ,imagen: "../resources/teni61.webp"},
-    {
-      idTeni: 62,
-      marca: "Bata",
-      modelo: "Suede Classic",
-      tipo: "Casual",
-      color: "Amarillo",
-      talla: 12,
-      genero: "Femenino",
-      material: "Tela",
-      precio: 10900,
-      fecha: "08-11-2021",
-      valoracion: 3.2,
-      stock: 3
-    ,imagen: "../resources/teni62.webp"},
-    {
-      idTeni: 63,
-      marca: "Reebok",
-      modelo: "Classic Leather",
-      tipo: "Casual",
-      color: "Negro",
-      talla: 5,
-      genero: "Masculino",
-      material: "Gamuza",
-      precio: 13800,
-      fecha: "15-01-2024",
-      valoracion: 4.9,
-      stock: 2
-    ,imagen: "../resources/teni63.webp"},
-    {
-      idTeni: 64,
-      marca: "Puma",
-      modelo: "Vertex",
-      tipo: "Casual",
-      color: "Amarillo",
-      talla: 10,
-      genero: "Femenino",
-      material: "Malla",
-      precio: 14900,
-      fecha: "18-08-2023",
-      valoracion: 3.5,
-      stock: 13
-    ,imagen: "../resources/teni64.webp"},
-    {
-      idTeni: 65,
-      marca: "Paragon",
-      modelo: "Thunder Spectra",
-      tipo: "Senderismo",
-      color: "Azul",
-      talla: 10,
-      genero: "Femenino",
-      material: "Cuero",
-      precio: 13800,
-      fecha: "25-04-2023",
-      valoracion: 4.4,
-      stock: 17
-    ,imagen: "../resources/teni65.webp"},
-    {
-      idTeni: 66,
-      marca: "New Balance",
-      modelo: "Fresh Foam",
-      tipo: "Entrenamiento",
-      color: "Gris",
-      talla: 10,
-      genero: "Masculino",
-      material: "Sintético",
-      precio: 5900,
-      fecha: "15-10-2021",
-      valoracion: 3.1,
-      stock: 7
-    ,imagen: "../resources/teni66.webp"},
-    {
-      idTeni: 67,
-      marca: "Puma",
-      modelo: "SM-306",
-      tipo: "Entrenamiento",
-      color: "Blanco",
-      talla: 5,
-      genero: "Femenino",
-      material: "Malla",
-      precio: 11500,
-      fecha: "17-12-2021",
-      valoracion: 4.5,
-      stock: 12
-    ,imagen: "../resources/teni67.webp"},
-    {
-      idTeni: 68,
-      marca: "Nike",
-      modelo: "Max",
-      tipo: "Baloncesto",
-      color: "Blanco",
-      talla: 5,
-      genero: "Masculino",
-      material: "Sintético",
-      precio: 8800,
-      fecha: "16-01-2021",
-      valoracion: 4.8,
-      stock: 6
-    ,imagen: "../resources/teni68.webp"},
-    {
-      idTeni: 69,
-      marca: "Nike",
-      modelo: "Fresh Foam",
-      tipo: "Senderismo",
-      color: "Negro",
-      talla: 12,
-      genero: "Masculino",
-      material: "Sintético",
-      precio: 4800,
-      fecha: "20-07-2024",
-      valoracion: 3.5,
-      stock: 29
-    ,imagen: "../resources/teni69.webp"},
-    {
-      idTeni: 70,
-      marca: "New Balance",
-      modelo: "Ambassador",
-      tipo: "Casual",
-      color: "Negro",
-      talla: 12,
-      genero: "Masculino",
-      material: "Gamuza",
-      precio: 9100,
-      fecha: "05-07-2024",
-      valoracion: 3.8,
-      stock: 19
-    }
-  ]; 
+    precio: 7600,
+    fecha: "13-03-2025",
+    valoracion: 4.7,
+    stock: 4,
+    imagen: "../resources/tenis2.avif"
+ },
+  {
+    idTeni: 3,
+    marca: "Adidas",
+    modelo: "Stan Smith",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 7100,
+    fecha: "15-07-2022",
+    valoracion: 3.1,
+    stock: 28,
+    imagen: "../resources/tenis3.avif"
+ },
+  {
+    idTeni: 4,
+    marca: "Nike",
+    modelo: "Zoom Fly",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 9500,
+    fecha: "25-08-2022",
+    valoracion: 4.9,
+    stock: 3,
+    imagen: "../resources/teni4.avif"
+ },
+  {
+    idTeni: 5,
+    marca: "Reebok",
+    modelo: "Max",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 12200,
+    fecha: "20-12-2024",
+    valoracion: 3.7,
+    stock: 11,
+    imagen: "../resources/teni5.jpg"
+ },
+  {
+    idTeni: 6,
+    marca: "Adidas",
+    modelo: "Ultraboost",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 12300,
+    fecha: "20-08-2023",
+    valoracion: 3.7,
+    stock: 23,
+    imagen: "../resources/teni6.jpg"
+ },
+  {
+    idTeni: 7,
+    marca: "Reebok",
+    modelo: "Ultraboost",
+    color: "Gris",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 7400,
+    fecha: "22-05-2021",
+    valoracion: 3,
+    stock: 6,
+    imagen: "../resources/teni7.webp"
+ },
+  {
+    idTeni: 8,
+    marca: "Adidas",
+    modelo: "Ignite",
+    color: "Azul",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 8600,
+    fecha: "03-03-2023",
+    valoracion: 3.4,
+    stock: 5,
+    imagen: "../resources/teni8.jpg"
+ },
+  {
+    idTeni: 9,
+    marca: "Adidas",
+    modelo: "Samba",
+    color: "Azul",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 6200,
+    fecha: "07-05-2024",
+    valoracion: 3.8,
+    stock: 15,
+    imagen: "../resources/teni9.webp"
+ },
+  {
+    idTeni: 10,
+    marca: "Reebok",
+    modelo: "Comfit",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 13500,
+    fecha: "21-12-2022",
+    valoracion: 4.9,
+    stock: 11,
+    imagen: "../resources/teni10.jpg"
+ },
+  {
+    idTeni: 11,
+    marca: "Sparx",
+    modelo: "Air Max 90",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 4700,
+    fecha: "03-10-2023",
+    valoracion: 3.2,
+    stock: 10,
+    imagen: "../resources/teni11.webp"
+ },
+  {
+    idTeni: 12,
+    marca: "Adidas",
+    modelo: "Yeezy Boost",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 12400,
+    fecha: "22-11-2023",
+    valoracion: 4.9,
+    stock: 18,
+    imagen: "../resources/teni12.webp"
+ },
+  {
+    idTeni: 13,
+    marca: "Puma",
+    modelo: "Future Rider",
+    color: "Rojo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 13300,
+    fecha: "10-01-2024",
+    valoracion: 4.7,
+    stock: 14,
+    imagen: "../resources/teni13.jpg"
+ },
+  {
+    idTeni: 14,
+    marca: "Skechers",
+    modelo: "UNO",
+    color: "Azul",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 13300,
+    fecha: "08-05-2021",
+    valoracion: 3.9,
+    stock: 12,
+    imagen: "../resources/teni14.webp"
+ },
+  {
+    idTeni: 15,
+    marca: "Bata",
+    modelo: "Power",
+    color: "Rojo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 7100,
+    fecha: "20-04-2024",
+    valoracion: 3.7,
+    stock: 28,
+    imagen: "../resources/teni15.jpg"
+ },
+  {
+    idTeni: 16,
+    marca: "Nike",
+    modelo: "Zoom Fly",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 8500,
+    fecha: "28-09-2021",
+    valoracion: 3.5,
+    stock: 8,
+    imagen: "../resources/teni16.jpg"
+ },
+  {
+    idTeni: 17,
+    marca: "Puma",
+    modelo: "Clyde",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 11100,
+    fecha: "10-07-2024",
+    valoracion: 4.2,
+    stock: 27,
+    imagen: "../resources/teni17.avif"
+ },
+  {
+    idTeni: 18,
+    marca: "New Balance",
+    modelo: "Zoom Fly",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 7300,
+    fecha: "28-01-2024",
+    valoracion: 3.1,
+    stock: 27,
+    imagen: "../resources/teni18.webp"
+ },
+  {
+    idTeni: 19,
+    marca: "Puma",
+    modelo: "Classic Leather",
+    color: "Amarillo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 8500,
+    fecha: "23-02-2023",
+    valoracion: 3,
+    stock: 25,
+    imagen: "../resources/teni19.webp"
+ },
+  {
+    idTeni: 20,
+    marca: "Adidas",
+    modelo: "Future Rider",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 6400,
+    fecha: "22-08-2021",
+    valoracion: 3.9,
+    stock: 3,
+    imagen: "../resources/teni20.webp"
+ },
+  {
+    idTeni: 21,
+    marca: "Bata",
+    modelo: "Yeezy Boost",
+    color: "Amarillo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 9500,
+    fecha: "16-05-2022",
+    valoracion: 3.1,
+    stock: 16,
+    imagen: "../resources/teni21.webp"
+ },
+  {
+    idTeni: 22,
+    marca: "Paragon",
+    modelo: "Stan Smith",
+    color: "Rojo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 4500,
+    fecha: "17-05-2021",
+    valoracion: 3.5,
+    stock: 16,
+    imagen: "../resources/teni22.webp"
+ },
+  {
+    idTeni: 23,
+    marca: "Paragon",
+    modelo: "SS-421",
+    color: "Amarillo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 13600,
+    fecha: "29-01-2022",
+    valoracion: 3.4,
+    stock: 28,
+    imagen: "../resources/teni23.webp"
+ },
+  {
+    idTeni: 24,
+    marca: "Bata",
+    modelo: "SM-162",
+    color: "Rojo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 4900,
+    fecha: "09-11-2022",
+    valoracion: 3.5,
+    stock: 10,
+    imagen: "../resources/teni24.webp"
+ },
+  {
+    idTeni: 25,
+    marca: "Nike",
+    modelo: "Stan Smith",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 10200,
+    fecha: "05-02-2024",
+    valoracion: 3.3,
+    stock: 18,
+    imagen: "../resources/teni25.webp"
+ },
+  {
+    idTeni: 26,
+    marca: "Adidas",
+    modelo: "Thunder Spectra",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 7700,
+    fecha: "25-03-2024",
+    valoracion: 3,
+    stock: 1,
+    imagen: "../resources/teni26.webp"
+ },
+  {
+    idTeni: 27,
+    marca: "Sparx",
+    modelo: "SF-871",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 10900,
+    fecha: "27-10-2023",
+    valoracion: 3.2,
+    stock: 15,
+    imagen: "../resources/teni27.webp"
+ },
+  {
+    idTeni: 28,
+    marca: "Adidas",
+    modelo: "NMD",
+    color: "Rojo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 15500,
+    fecha: "08-03-2023",
+    valoracion: 4.2,
+    stock: 14,
+    imagen: "../resources/teni28.webp"
+ },
+  {
+    idTeni: 29,
+    marca: "Sparx",
+    modelo: "Air Max 90",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 11700,
+    fecha: "09-11-2021",
+    valoracion: 4.9,
+    stock: 14,
+    imagen: "../resources/teni29.webp"
+ },
+  {
+    idTeni: 30,
+    marca: "Nike",
+    modelo: "Max",
+    color: "Rojo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 4400,
+    fecha: "08-06-2021",
+    valoracion: 5,
+    stock: 28,
+    imagen: "../resources/teni30.webp"
+ },
+  {
+    idTeni: 31,
+    marca: "Adidas",
+    modelo: "NMD",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 9200,
+    fecha: "06-03-2024",
+    valoracion: 3.8,
+    stock: 14,
+    imagen: "../resources/teni31.webp"
+ },
+  {
+    idTeni: 32,
+    marca: "New Balance",
+    modelo: "Vertex",
+    color: "Rojo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 10100,
+    fecha: "04-03-2021",
+    valoracion: 3.3,
+    stock: 26,
+    imagen: "../resources/teni32.webp"
+ },
+  {
+    idTeni: 33,
+    marca: "Reebok",
+    modelo: "Air Max 90",
+    color: "Gris",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 10400,
+    fecha: "28-09-2021",
+    valoracion: 4.3,
+    stock: 19,
+    imagen: "../resources/teni33.webp"
+ },
+  {
+    idTeni: 34,
+    marca: "Nike",
+    modelo: "Stimulus",
+    color: "Gris",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 12200,
+    fecha: "23-06-2022",
+    valoracion: 4,
+    stock: 16,
+    imagen: "../resources/teni34.webp"
+ },
+  {
+    idTeni: 35,
+    marca: "Reebok",
+    modelo: "Classic Leather",
+    color: "Rojo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 7300,
+    fecha: "01-08-2021",
+    valoracion: 5,
+    stock: 10,
+    imagen: "../resources/teni35.webp"
+ },
+  {
+    idTeni: 36,
+    marca: "Sparx",
+    modelo: "Thunder Spectra",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 5500,
+    fecha: "07-03-2022",
+    valoracion: 3.1,
+    stock: 22,
+    imagen: "../resources/teni36.webp"
+ },
+  {
+    idTeni: 37,
+    marca: "Bata",
+    modelo: "SF-871",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 8700,
+    fecha: "16-04-2021",
+    valoracion: 4.6,
+    stock: 4,
+    imagen: "../resources/teni37.jpg"
+ },
+  {
+    idTeni: 38,
+    marca: "Paragon",
+    modelo: "RS-X",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 15500,
+    fecha: "14-03-2023",
+    valoracion: 3.6,
+    stock: 1,
+    imagen: "../resources/teni38.jpg"
+ },
+  {
+    idTeni: 39,
+    marca: "Nike",
+    modelo: "Air Max 90",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 6200,
+    fecha: "29-09-2023",
+    valoracion: 3.5,
+    stock: 3,
+    imagen: "../resources/teni39.webp"
+ },
+  {
+    idTeni: 40,
+    marca: "Nike",
+    modelo: "Cali",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 14800,
+    fecha: "04-03-2024",
+    valoracion: 4.3,
+    stock: 10,
+    imagen: "../resources/teni40.avif"
+ },
+  {
+    idTeni: 41,
+    marca: "Puma",
+    modelo: "SM-162",
+    color: "Amarillo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 10500,
+    fecha: "14-04-2022",
+    valoracion: 3.5,
+    stock: 8,
+    imagen: "../resources/teni41.webp"
+ },
+  {
+    idTeni: 42,
+    marca: "Puma",
+    modelo: "Suede Classic",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 9500,
+    fecha: "29-04-2023",
+    valoracion: 4.3,
+    stock: 8,
+    imagen: "../resources/teni42.jpg"
+ },
+  {
+    idTeni: 43,
+    marca: "Nike",
+    modelo: "Vertex",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 14600,
+    fecha: "24-12-2024",
+    valoracion: 4,
+    stock: 8,
+    imagen: "../resources/teni43.webp"
+ },
+  {
+    idTeni: 44,
+    marca: "Adidas",
+    modelo: "Classic Leather",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 9500,
+    fecha: "21-05-2023",
+    valoracion: 3.8,
+    stock: 8,
+    imagen: "../resources/teni44.webp"
+ },
+  {
+    idTeni: 45,
+    marca: "Reebok",
+    modelo: "Samba",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 12700,
+    fecha: "20-10-2024",
+    valoracion: 4.1,
+    stock: 20,
+    imagen: "../resources/teni45.jpg"
+ },
+  {
+    idTeni: 46,
+    marca: "Sparx",
+    modelo: "SS-421",
+    color: "Azul",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 8800,
+    fecha: "24-01-2024",
+    valoracion: 3.6,
+    stock: 13,
+    imagen: "../resources/teni46.webp"
+ },
+  {
+    idTeni: 47,
+    marca: "Reebok",
+    modelo: "Gazelle",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 14800,
+    fecha: "12-12-2023",
+    valoracion: 4.4,
+    stock: 13,
+    imagen: "../resources/teni47.avif"
+ },
+  {
+    idTeni: 48,
+    marca: "Reebok",
+    modelo: "Comfit",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 12300,
+    fecha: "03-02-2021",
+    valoracion: 3.8,
+    stock: 20,
+    imagen: "../resources/teni48.jpg"
+ },
+  {
+    idTeni: 49,
+    marca: "Adidas",
+    modelo: "Yeezy Boost",
+    color: "Amarillo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 12400,
+    fecha: "21-05-2021",
+    valoracion: 3.7,
+    stock: 16,
+    imagen: "../resources/teni49.webp"
+ },
+  {
+    idTeni: 50,
+    marca: "Adidas",
+    modelo: "Ultraboost",
+    color: "Azul",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 7900,
+    fecha: "23-05-2021",
+    valoracion: 4.7,
+    stock: 29,
+    imagen: "../resources/teni50.avif"
+ },
+  {
+    idTeni: 51,
+    marca: "Nike",
+    modelo: "Cali",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 13100,
+    fecha: "21-04-2022",
+    valoracion: 4.8,
+    stock: 25,
+    imagen: "../resources/teni51.avif"
+ },
+  {
+    idTeni: 52,
+    marca: "Adidas",
+    modelo: "SL-147",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 11600,
+    fecha: "18-03-2025",
+    valoracion: 3.1,
+    stock: 27,
+    imagen: "../resources/teni52.jpg"
+ },
+  {
+    idTeni: 53,
+    marca: "Adidas",
+    modelo: "Ignite",
+    color: "Gris",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 6900,
+    fecha: "11-04-2023",
+    valoracion: 3.5,
+    stock: 20,
+    imagen: "../resources/teni53.jpg"
+ },
+  {
+    idTeni: 54,
+    marca: "Adidas",
+    modelo: "Suede Classic",
+    color: "Gris",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 5900,
+    fecha: "28-06-2021",
+    valoracion: 3.7,
+    stock: 3,
+    imagen: "../resources/teni54.webp"
+ },
+  {
+    idTeni: 55,
+    marca: "Paragon",
+    modelo: "Superstar",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 13600,
+    fecha: "02-11-2022",
+    valoracion: 4.6,
+    stock: 2,
+    imagen: "../resources/teni55.webp"
+ },
+  {
+    idTeni: 56,
+    marca: "Nike",
+    modelo: "Astro",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 15500,
+    fecha: "01-02-2024",
+    valoracion: 5,
+    stock: 28,
+    imagen: "../resources/teni56.webp"
+ },
+  {
+    idTeni: 57,
+    marca: "Paragon",
+    modelo: "Air Max 90",
+    color: "Azul",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 9500,
+    fecha: "04-04-2025",
+    valoracion: 4.9,
+    stock: 25,
+    imagen: "../resources/teni57.webp"
+ },
+  {
+    idTeni: 58,
+    marca: "Puma",
+    modelo: "SM-306",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 11100,
+    fecha: "28-11-2023",
+    valoracion: 4.8,
+    stock: 26,
+    imagen: "../resources/teni58.webp"
+ },
+  {
+    idTeni: 59,
+    marca: "New Balance",
+    modelo: "Thunder Spectra",
+    color: "Verde",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 14300,
+    fecha: "10-04-2023",
+    valoracion: 3.6,
+    stock: 9,
+    imagen: "../resources/teni59.webp"
+ },
+  {
+    idTeni: 60,
+    marca: "Paragon",
+    modelo: "Vertex",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 9500,
+    fecha: "14-03-2023",
+    valoracion: 5,
+    stock: 30,
+    imagen: "../resources/teni60.webp"
+ },
+  {
+    idTeni: 61,
+    marca: "Reebok",
+    modelo: "Power",
+    color: "Amarillo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 15400,
+    fecha: "26-08-2023",
+    valoracion: 3.5,
+    stock: 7,
+    imagen: "../resources/teni61.webp"
+ },
+  {
+    idTeni: 62,
+    marca: "Bata",
+    modelo: "Suede Classic",
+    color: "Amarillo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 10900,
+    fecha: "08-11-2021",
+    valoracion: 3.2,
+    stock: 3,
+    imagen: "../resources/teni62.webp"
+ },
+  {
+    idTeni: 63,
+    marca: "Reebok",
+    modelo: "Classic Leather",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 13800,
+    fecha: "15-01-2024",
+    valoracion: 4.9,
+    stock: 2,
+    imagen: "../resources/teni63.webp"
+ },
+  {
+    idTeni: 64,
+    marca: "Puma",
+    modelo: "Vertex",
+    color: "Amarillo",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 14900,
+    fecha: "18-08-2023",
+    valoracion: 3.5,
+    stock: 13,
+    imagen: "../resources/teni64.webp"
+ },
+  {
+    idTeni: 65,
+    marca: "Paragon",
+    modelo: "Thunder Spectra",
+    color: "Azul",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 13800,
+    fecha: "25-04-2023",
+    valoracion: 4.4,
+    stock: 17,
+    imagen: "../resources/teni65.webp"
+ },
+  {
+    idTeni: 66,
+    marca: "New Balance",
+    modelo: "Fresh Foam",
+    color: "Gris",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 5900,
+    fecha: "15-10-2021",
+    valoracion: 3.1,
+    stock: 7,
+    imagen: "../resources/teni66.webp"
+ },
+  {
+    idTeni: 67,
+    marca: "Puma",
+    modelo: "SM-306",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 11500,
+    fecha: "17-12-2021",
+    valoracion: 4.5,
+    stock: 12,
+    imagen: "../resources/teni67.webp"
+ },
+  {
+    idTeni: 68,
+    marca: "Nike",
+    modelo: "Max",
+    color: "Blanco",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 8800,
+    fecha: "16-01-2021",
+    valoracion: 4.8,
+    stock: 6,
+    imagen: "../resources/teni68.webp"
+ },
+  {
+    idTeni: 69,
+    marca: "Nike",
+    modelo: "Fresh Foam",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 4800,
+    fecha: "20-07-2024",
+    valoracion: 3.5,
+    stock: 29,
+    imagen: "../resources/teni69.webp"
+ },
+  {
+    idTeni: 70,
+    marca: "New Balance",
+    modelo: "Ambassador",
+    color: "Negro",
+    talla: {
+       talla1: 24,
+       talla2: 26,
+       talla3: 28
+    },
+    precio: 9100,
+    fecha: "05-07-2024",
+    valoracion: 3.8,
+    stock: 19,
+    imagen: ""
+ }
+ ]

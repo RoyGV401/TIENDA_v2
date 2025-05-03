@@ -54,53 +54,73 @@
                 </div>
             </div>
         </header>
+
+        <div class="container m-3">
+          <div class="row justify-content-center">
+              <div class="col-auto">
+                <nav class="justify-content-center navbar bg-body-tertiary">
+                  <div class="container-fluid">
+                    <form class="d-flex" role="search">
+                      <button class="p-0 w-50 btn btn-primary me-2" type="button" id="btn_filtro">
+                        Filtrar ▷
+                      </button>
+                      <input id="barra_buscar" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    </form>
+                  </div>
+                </nav>
+              </div>
+          </div>
+      </div>
+
+      <div id="filtroDiv" class="container-sm rounded-m mt-0 pt-0 px-0 w-75">
+            <div class="row align-items-center" >
+              <div class="col">
+                <div class="card  h-100 max-height-1 p-4 m-0 shadow-sm">
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th colspan="3" scope="col">Color</th>
+                      </tr>
+                    </thead>
+                    <tbody id="bodyColor">
+                      <tr id="trBody">
+                          
+                          
+                        
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col ">
+                <div class="card  h-100 max-height-1 p-4 m-0 shadow-sm">
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th colspan="3" scope="col">Marca</th>
+                      </tr>
+                    </thead>
+                    <tbody id="bodyMarca">
+                      <tr id="trBody2">
+                          
+                          
+                        
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+      </div>
+          
+          
         <!-- Section-->
          
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
-                <div id="filtros" class="row row-cols-2 row-cols-md-3 row-cols-xl-4 m-5 justify-content-start">
-                  <div class="dropdown">
-                  
-                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Filtrar
-                    </button>
-                        
-                       <ul class="dropdown-menu m-3 p-2" id="filterList" aria-labelledby="dropdownMenuButton1">
-                        <p class="h6 fw-bold">Color</p>
-                        <div id="filtrosColor">
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="filerColor" id="radioColor1" checked>
-                              <label class="form-check-label" for="radioColor1">
-                                Ninguno
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="filerColor" id="radioColor2">
-                              <label class="form-check-label" for="radioColor2">
-                                ---
-                              </label>
-                            </div>
-                        </div>
-
-                        <p class="h6 fw-bold">Marca</p>
-                        <div id="filtrosMarca">
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="filterBrand" id="radioBrand1" checked>
-                            <label class="form-check-label" for="radioBrand1">
-                              Ninguno
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="filterBrand" id="radioBrand2">
-                            <label class="form-check-label" for="radioBrand2">
-                              ---
-                            </label>
-                          </div>
-                      </div>
-                      </ul>
-                   
-                  </div>
-                </div>
+                
                
                 <div id="contenedor" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
@@ -118,6 +138,25 @@
     </body>
 
     <extra>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="modal fade" id="carrito_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">

@@ -14,65 +14,124 @@ const brands = getBrands();
 const colors = getColors();
 
 const FILTERS = {
-    color:undefined,
-    brand:undefined
+    color: [],
+    brand: []
 }
-
+var palabra = "";
 
 var carrito = [];
 
 window.onload = function(){
 
     loadShoes();
-    loadFilters();
+    loadFiltro();
+    let serch = document.getElementById("barra_buscar");
+    serch.addEventListener("input",function(){
+        palabra = this.value;
+        loadShoes();
+    });
+    
 }
 
 
 function loadShoes() {
     let html = ``;
     let toSearch = tenis;
+    
+    let busca = [];
 
-    if (FILTERS.color != undefined) {
-        toSearch = toSearch.filter((s) => s.color == FILTERS.color);
+   
+
+    if(FILTERS.brand.length>0 && FILTERS.color.length>0){
+        let busca2 = []
+        FILTERS.color.forEach(c => {
+            busca= busca.concat(toSearch.filter((s) => s.color == c));
+        });
+        
+        FILTERS.brand.forEach(b => {
+            busca2= busca2.concat((busca.filter((s) => s.marca == b)));
+        });
+        busca = busca2;
+    }else{
+        if (FILTERS.color.length>0) {
+            FILTERS.color.forEach(c => {
+                busca= busca.concat(toSearch.filter((s) => s.color == c));
+            });
+        }
+    
+        if (FILTERS.brand.length>0) {
+            FILTERS.brand.forEach(b => {
+                busca= busca.concat(toSearch.filter((s) => s.marca == b));
+            });
+        }
+    }
+    
+
+    if(FILTERS.color.length==0 && FILTERS.brand.length==0){
+        busca = tenis;
     }
 
-    if (FILTERS.brand != undefined) {
-        toSearch = toSearch.filter((s) => s.marca == FILTERS.brand);
-    }
+    if(palabra!="")
+        busca = busca.filter((s) => (s.marca+s.modelo+s.color).trim().toLowerCase().includes(palabra.trim().toLowerCase()));
 
+    busca.sort(function (a, b) {
+        if (a.idTeni > b.idTeni) {
+          return 1;
+        }
+        if (a.idTeni < b.idTeni) {
+          return -1;
+        }
+        // a must be equal to b
+        return 0;
+      });
+    
     document.getElementById("contenedor").innerHTML = "";
 
-    toSearch.forEach(t => {
+    busca.forEach(t => {
         html += `
             <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Product image-->
-                    <!-- <img class="card-img-top" id="" src="${t.imagen}" alt="..." /> -->
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">${t.marca}</h5>
-                            <!-- Product price-->
-                            $${t.precio}
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">
-                            <button type="button" id="btn_${t.idTeni}" class="btn btn-outline-dark mt-auto">Agregar al 🛒</button>
-                        </div>
-                    </div>
-                </div>
+    <div class="card h-100 d-flex flex-column">
+        <!-- Product image container with fixed aspect ratio -->
+        <div class="image-container" style="height: 200px; ">
+            <img class="card-img-top w-100 h-100 object-fit-cover" src="${t.imagen}" alt="${t.modelo}" />
+        </div>
+        <!-- Product details -->
+        <div class="card-body p-4 d-flex flex-column">
+            <div class="text-center mt-auto">
+                <!-- Product name -->
+                <h5 class="fw-bolder mb-1">${t.modelo}</h5>
+                <h5 class="fw-bolder mb-2">${t.marca}</h5>
+                <!-- Product price -->
+                <div class="price mb-2">$${t.precio}</div>
             </div>
+        </div>
+        <!-- Product actions -->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent mt-auto">
+            <div class="text-center">
+                <button type="button" id="btn_${t.idTeni}" class="btn btn-outline-dark mt-auto">Agregar al 🛒</button>
+            </div>
+        </div>
+    </div>
+</div>
         `;
     });
 
     document.getElementById("contenedor").innerHTML = html;
-
-    tenis.forEach(t => {
+    
+    busca.forEach(t => {
         document.getElementById("btn_" + t.idTeni).onclick = function () {
+            if(this.innerHTML=="Agregado!"){
+                let index = carrito.findIndex(item => item.idTeni === t.idTeni);
+                if (index !== -1) {
+                    carrito.splice(index, 1);
+                }
+                this.innerHTML = "Agregar al 🛒";
+            }else{
             carrito.push(t);
+            this.innerHTML = "Agregado!";
+            }
+            
+
         };
     });
 
@@ -85,82 +144,7 @@ function loadShoes() {
     };
 }
 
-function loadFilters()
-{
-    let i = 0;
-    const filterDiv = document.getElementById('filtrosColor');
-    filterDiv.innerHTML = `
-                        <div class="form-check">
-                              <input class="form-check-input" type="radio" name="filterColor" id="radioColorNone" checked>
-                              <label class="form-check-label" for="radioColor">
-                                ---
-                              </label>
-                            </div>
-                  
-    `;
-    colors.forEach(c => {
-        i++;
-        filterDiv.innerHTML += `
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="filterColor" id="radioColor${i}">
-                              <label class="form-check-label" for="radioColor${i}">
-                                ${c}
-                              </label>
-                            </div>
-                            `;
-    });
 
-    i = 0;
-    const brandDiv = document.getElementById('filtrosMarca');
-    brandDiv.innerHTML = `
-                        <div class="form-check">
-                              <input class="form-check-input" type="radio" name="filterBrand" id="radioBrandNone" checked>
-                              <label class="form-check-label" for="radioBrand">
-                                ---
-                              </label>
-                            </div>
-                  
-    `;
-    brands.forEach(c => {
-        i++;
-        brandDiv.innerHTML += `
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="filterBrand" id="radioBrand${i}">
-                              <label class="form-check-label" for="radioBrand${i}">
-                                ${c}
-                              </label>
-                            </div>
-                            `;
-    });
-
-    brandDiv.addEventListener("focusout", (event) => {
-        const selectedRadio = document.querySelector('input[name="filterBrand"]:checked');
-        const value = selectedRadio.nextElementSibling.textContent.trim();
-        if (value != "---")
-        {
-            FILTERS.brand = value;
-        }
-        else
-        {
-            FILTERS.brand = undefined;
-        }
-        loadShoes();
-    });
-
-    filterDiv.addEventListener("focusout", (event) => {
-        const selectedRadio = document.querySelector('input[name="filterColor"]:checked');
-        const value = selectedRadio.nextElementSibling.textContent.trim();
-        if (value != "---")
-        {
-            FILTERS.color = value;
-        }
-        else
-        {
-            FILTERS.color = undefined;
-        }
-        loadShoes();
-    });
-}
 
 function getBrands()
 {
@@ -178,4 +162,80 @@ function getColors()
         if (!result.includes(t.color)) result.push(t.color);
     });
     return result;
+}
+
+function loadFiltro(){
+
+    let filtro = document.getElementById("filtroDiv");
+    let btn = document.getElementById("btn_filtro");
+    cargarFiltro(colors,"trBody");
+    cargarFiltro(brands,"trBody2");
+    filtro.hidden = true;
+    btn.onclick = function(){
+        if(filtro.hidden == true){
+            filtro.hidden = false;
+            btn.innerText = "Filtrar ▽";
+        }
+        else{
+            filtro.hidden = true;
+            btn.innerText = "Filtrar ▷";
+
+        }
+    }
+    
+}
+
+function cargarFiltro(arreglo,id){
+    let trBody = document.getElementById(id);
+    
+    let newTD = document.createElement("td");
+    
+    arreglo.forEach((c, index) => {
+        const checkboxId = `checkbox-${index}`;
+        newTD.innerHTML += `
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="${c}" id="${c}${checkboxId}">
+                <label class="form-check-label" for="${checkboxId}">
+                    ${c}
+                </label>
+            </div>
+        `;
+    
+        if ((index + 1) % 3 === 0) {
+            trBody.appendChild(newTD);
+            newTD = document.createElement("td");
+        }
+
+        
+    });
+
+    if (arreglo.length % 3 !== 0) {
+        trBody.appendChild(newTD);
+    }
+    
+
+    arreglo.forEach((c,index) => {
+        const checkboxId = `checkbox-${index}`;
+        document.getElementById(c+checkboxId).onclick=function(){
+            if(arreglo===colors)
+                if(this.checked){
+                    FILTERS.color.push(c);
+                    loadShoes();
+                }else{
+                    
+                    FILTERS.color.splice(FILTERS.color.indexOf(c),1);
+                    loadShoes();
+                }
+            else
+                if(this.checked){
+                    alert();
+                    FILTERS.brand.push(c);
+                    loadShoes();
+                }else{
+                    
+                    FILTERS.brand.splice(FILTERS.brand.indexOf(c),1);
+                    loadShoes();
+                }
+        }
+    });
 }
