@@ -227,8 +227,7 @@ function cargarFiltro(arreglo,id){
                     loadShoes();
                 }
             else
-                if(this.checked){
-                    alert();
+                if(this.checked){  
                     FILTERS.brand.push(c);
                     loadShoes();
                 }else{
