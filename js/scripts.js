@@ -117,6 +117,7 @@ function loadShoes() {
     });
 
     document.getElementById("contenedor").innerHTML = html;
+    let carrito_contador = document.getElementById("contador");
     
     busca.forEach(t => {
         document.getElementById("btn_" + t.idTeni).onclick = function () {
@@ -124,10 +125,12 @@ function loadShoes() {
                 let index = carrito.findIndex(item => item.idTeni === t.idTeni);
                 if (index !== -1) {
                     carrito.splice(index, 1);
+                    carrito_contador.innerHTML = carrito.length;
                 }
                 this.innerHTML = "Agregar al 🛒";
             }else{
             carrito.push(t);
+            carrito_contador.innerHTML = carrito.length;
             this.innerHTML = "Agregado!";
             }
             
@@ -238,3 +241,4 @@ function cargarFiltro(arreglo,id){
         }
     });
 }
+
