@@ -273,7 +273,7 @@ export const TENIS = [
  },
   {
     idTeni: 18,
-    marca: "New Balance",
+    marca: "Nike",
     modelo: "Zoom Fly",
     color: "Verde",
     talla: {
@@ -285,7 +285,7 @@ export const TENIS = [
     fecha: "28-01-2024",
     valoracion: 3.1,
     stock: 27,
-    imagen: "../resources/teni18.webp"
+    imagen: "../resources/teni18.avif"
  },
   {
     idTeni: 19,
@@ -305,7 +305,7 @@ export const TENIS = [
  },
   {
     idTeni: 20,
-    marca: "Adidas",
+    marca: "Puma",
     modelo: "Future Rider",
     color: "Verde",
     talla: {
@@ -333,11 +333,11 @@ export const TENIS = [
     fecha: "16-05-2022",
     valoracion: 3.1,
     stock: 16,
-    imagen: "../resources/teni21.webp"
+    imagen: "../resources/teni21.avif"
  },
   {
     idTeni: 22,
-    marca: "Paragon",
+    marca: "Adidas",
     modelo: "Stan Smith",
     color: "Rojo",
     talla: {
@@ -349,7 +349,7 @@ export const TENIS = [
     fecha: "17-05-2021",
     valoracion: 3.5,
     stock: 16,
-    imagen: "../resources/teni22.webp"
+    imagen: "../resources/teni22.avif"
  },
   {
     idTeni: 23,
@@ -365,7 +365,7 @@ export const TENIS = [
     fecha: "29-01-2022",
     valoracion: 3.4,
     stock: 28,
-    imagen: "../resources/teni23.webp"
+    imagen: "../resources/teni23.jpeg"
  },
   {
     idTeni: 24,
@@ -381,11 +381,11 @@ export const TENIS = [
     fecha: "09-11-2022",
     valoracion: 3.5,
     stock: 10,
-    imagen: "../resources/teni24.webp"
+    imagen: "../resources/teni24.png"
  },
   {
     idTeni: 25,
-    marca: "Nike",
+    marca: "Adidas",
     modelo: "Stan Smith",
     color: "Verde",
     talla: {
@@ -397,7 +397,7 @@ export const TENIS = [
     fecha: "05-02-2024",
     valoracion: 3.3,
     stock: 18,
-    imagen: "../resources/teni25.webp"
+    imagen: "../resources/teni25.avif"
  },
   {
     idTeni: 26,
@@ -429,7 +429,7 @@ export const TENIS = [
     fecha: "27-10-2023",
     valoracion: 3.2,
     stock: 15,
-    imagen: "../resources/teni27.webp"
+    imagen: "../resources/teni27.png"
  },
   {
     idTeni: 28,
@@ -445,11 +445,11 @@ export const TENIS = [
     fecha: "08-03-2023",
     valoracion: 4.2,
     stock: 14,
-    imagen: "../resources/teni28.webp"
+    imagen: "../resources/teni28.jpg"
  },
   {
     idTeni: 29,
-    marca: "Sparx",
+    marca: "Nike",
     modelo: "Air Max 90",
     color: "Blanco",
     talla: {
@@ -461,7 +461,7 @@ export const TENIS = [
     fecha: "09-11-2021",
     valoracion: 4.9,
     stock: 14,
-    imagen: "../resources/teni29.webp"
+    imagen: "../resources/teni29.jpeg"
  },
   {
     idTeni: 30,
@@ -477,7 +477,7 @@ export const TENIS = [
     fecha: "08-06-2021",
     valoracion: 5,
     stock: 28,
-    imagen: "../resources/teni30.webp"
+    imagen: "../resources/teni30.avif"
  },
   {
     idTeni: 31,
@@ -493,7 +493,7 @@ export const TENIS = [
     fecha: "06-03-2024",
     valoracion: 3.8,
     stock: 14,
-    imagen: "../resources/teni31.webp"
+    imagen: "../resources/teni31.avif"
  },
   {
     idTeni: 32,
@@ -513,7 +513,7 @@ export const TENIS = [
  },
   {
     idTeni: 33,
-    marca: "Reebok",
+    marca: "Nike",
     modelo: "Air Max 90",
     color: "Gris",
     talla: {
@@ -525,7 +525,7 @@ export const TENIS = [
     fecha: "28-09-2021",
     valoracion: 4.3,
     stock: 19,
-    imagen: "../resources/teni33.webp"
+    imagen: "../resources/teni33.jpg"
  },
   {
     idTeni: 34,
@@ -849,7 +849,7 @@ export const TENIS = [
  },
   {
     idTeni: 54,
-    marca: "Adidas",
+    marca: "Puma",
     modelo: "Suede Classic",
     color: "Gris",
     talla: {
@@ -861,11 +861,11 @@ export const TENIS = [
     fecha: "28-06-2021",
     valoracion: 3.7,
     stock: 3,
-    imagen: "../resources/teni54.webp"
+    imagen: "../resources/teni54.avif"
  },
   {
     idTeni: 55,
-    marca: "Paragon",
+    marca: "Adidas",
     modelo: "Superstar",
     color: "Verde",
     talla: {
@@ -877,7 +877,7 @@ export const TENIS = [
     fecha: "02-11-2022",
     valoracion: 4.6,
     stock: 2,
-    imagen: "../resources/teni55.webp"
+    imagen: "../resources/teni55.avif"
  },
   {
     idTeni: 56,
@@ -893,11 +893,11 @@ export const TENIS = [
     fecha: "01-02-2024",
     valoracion: 5,
     stock: 28,
-    imagen: "../resources/teni56.webp"
+    imagen: "../resources/teni56.jpg"
  },
   {
     idTeni: 57,
-    marca: "Paragon",
+    marca: "Nike",
     modelo: "Air Max 90",
     color: "Azul",
     talla: {
@@ -909,11 +909,11 @@ export const TENIS = [
     fecha: "04-04-2025",
     valoracion: 4.9,
     stock: 25,
-    imagen: "../resources/teni57.webp"
+    imagen: "../resources/teni57.jpg"
  },
   {
     idTeni: 58,
-    marca: "Puma",
+    marca: "New Balance",
     modelo: "SM-306",
     color: "Blanco",
     talla: {
@@ -929,7 +929,7 @@ export const TENIS = [
  },
   {
     idTeni: 59,
-    marca: "New Balance",
+    marca: "Puma",
     modelo: "Thunder Spectra",
     color: "Verde",
     talla: {
@@ -941,11 +941,11 @@ export const TENIS = [
     fecha: "10-04-2023",
     valoracion: 3.6,
     stock: 9,
-    imagen: "../resources/teni59.webp"
+    imagen: "../resources/teni59.jpg"
  },
   {
     idTeni: 60,
-    marca: "Paragon",
+    marca: "Bullpadel",
     modelo: "Vertex",
     color: "Blanco",
     talla: {
@@ -961,9 +961,9 @@ export const TENIS = [
  },
   {
     idTeni: 61,
-    marca: "Reebok",
+    marca: "Champion",
     modelo: "Power",
-    color: "Amarillo",
+    color: "Blanco",
     talla: {
        talla1: 24,
        talla2: 26,
@@ -973,11 +973,11 @@ export const TENIS = [
     fecha: "26-08-2023",
     valoracion: 3.5,
     stock: 7,
-    imagen: "../resources/teni61.webp"
+    imagen: "../resources/teni61.jpg"
  },
   {
     idTeni: 62,
-    marca: "Bata",
+    marca: "Puma",
     modelo: "Suede Classic",
     color: "Amarillo",
     talla: {
@@ -989,7 +989,7 @@ export const TENIS = [
     fecha: "08-11-2021",
     valoracion: 3.2,
     stock: 3,
-    imagen: "../resources/teni62.webp"
+    imagen: "../resources/teni62.avif"
  },
   {
     idTeni: 63,
@@ -1005,11 +1005,11 @@ export const TENIS = [
     fecha: "15-01-2024",
     valoracion: 4.9,
     stock: 2,
-    imagen: "../resources/teni63.webp"
+    imagen: "../resources/teni63.jpg"
  },
   {
     idTeni: 64,
-    marca: "Puma",
+    marca: "Bullpadel",
     modelo: "Vertex",
     color: "Amarillo",
     talla: {
@@ -1021,11 +1021,11 @@ export const TENIS = [
     fecha: "18-08-2023",
     valoracion: 3.5,
     stock: 13,
-    imagen: "../resources/teni64.webp"
+    imagen: "../resources/teni64.jpg"
  },
   {
     idTeni: 65,
-    marca: "Paragon",
+    marca: "Puma",
     modelo: "Thunder Spectra",
     color: "Azul",
     talla: {
@@ -1037,7 +1037,7 @@ export const TENIS = [
     fecha: "25-04-2023",
     valoracion: 4.4,
     stock: 17,
-    imagen: "../resources/teni65.webp"
+    imagen: "../resources/teni65.jpg"
  },
   {
     idTeni: 66,
@@ -1057,9 +1057,9 @@ export const TENIS = [
  },
   {
     idTeni: 67,
-    marca: "Puma",
+    marca: "New Balance",
     modelo: "SM-306",
-    color: "Blanco",
+    color: "Negro",
     talla: {
        talla1: 24,
        talla2: 26,
@@ -1069,12 +1069,12 @@ export const TENIS = [
     fecha: "17-12-2021",
     valoracion: 4.5,
     stock: 12,
-    imagen: "../resources/teni67.webp"
+    imagen: "../resources/teni67.jpg"
  },
   {
     idTeni: 68,
     marca: "Nike",
-    modelo: "Max",
+    modelo: "Air Max 97",
     color: "Blanco",
     talla: {
        talla1: 24,
@@ -1085,11 +1085,11 @@ export const TENIS = [
     fecha: "16-01-2021",
     valoracion: 4.8,
     stock: 6,
-    imagen: "../resources/teni68.webp"
+    imagen: "../resources/teni68.avif"
  },
   {
     idTeni: 69,
-    marca: "Nike",
+    marca: "New Balance",
     modelo: "Fresh Foam",
     color: "Negro",
     talla: {
@@ -1105,7 +1105,7 @@ export const TENIS = [
  },
   {
     idTeni: 70,
-    marca: "New Balance",
+    marca: "Nikes",
     modelo: "Ambassador",
     color: "Negro",
     talla: {
@@ -1117,6 +1117,6 @@ export const TENIS = [
     fecha: "05-07-2024",
     valoracion: 3.8,
     stock: 19,
-    imagen: ""
+    imagen: "../resources/teni70.avif"
  }
  ]
