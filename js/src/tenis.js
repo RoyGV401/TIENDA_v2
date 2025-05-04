@@ -77,7 +77,7 @@ export const TENIS = [
     fecha: "20-12-2024",
     valoracion: 3.7,
     stock: 11,
-    imagen: "../resources/teni5.jpg"
+    imagen: "../resources/teni5.png"
  },
   {
     idTeni: 6,

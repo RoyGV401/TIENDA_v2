@@ -91,33 +91,32 @@ function loadShoes() {
 
     busca.forEach(t => {
         html += `
-            <div class=" col mb-5" >
-    <div class="btn card h-100 d-flex flex-column" id="teni${t.idTeni}" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <!-- Product image container with fixed aspect ratio -->
-        <h5 class="fw-bolder mb-2 my-3">${t.marca}</h5>
-        <div class="image-container" style="height: 200px; ">
-            <img class="card-img-top w-100 h-100 object-fit-cover" src="${t.imagen}" alt="${t.modelo}" />
-        </div>
-        <!-- Product details -->
-        <div class="card-body p-4 pb-0 d-flex flex-column">
-            <div class="text-center mt-auto">
-                <!-- Product name -->
-                <label><h5 class="fw-bolder mb-1">${t.modelo}:</h5></label>
-                
-                <!-- Product price -->
-                <label><div class="price mb-2">$${t.precio}</div></label>
-                <div class="card-body p-0">
-                          <div class="star-rating" id="starRating${t.idTeni}">
-                          </div>
-                      </div>
-            </div>
-        </div>
-        <!-- Product actions -->
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent mt-auto">
-            
-        </div>
+            <div class="col mb-5">
+  <div class="btn card h-100 d-flex flex-column" id="teni${t.idTeni}" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <!-- Product image container with fixed aspect ratio -->
+    <h5 class="fw-bolder mb-2 my-3 h4 zin-1">${t.marca}</h5>
+    
+    <!-- Image container with square shape and white background -->
+    <div class="image-square bg-white d-flex align-items-center justify-content-center">
+      <img src="${t.imagen}" alt="${t.modelo}" class="img-fluid rounded" style="max-height: 100%; max-width: 100%; object-fit: contain;" />
     </div>
+
+    <!-- Product details -->
+    <div class="card-body p-4 pb-0 d-flex flex-column">
+      <div class="text-center mt-auto">
+        <label><h5 class="fw-bolder mb-1">${t.modelo}:</h5></label>
+        <label><div class="price mb-2">$${t.precio}</div></label>
+        <div class="card-body p-0">
+          <div class="star-rating" id="starRating${t.idTeni}"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product actions -->
+    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent mt-auto"></div>
+  </div>
 </div>
+
         `;
 
         
@@ -141,7 +140,7 @@ function loadShoes() {
             selected = t;
             document.getElementById("nombreTeni").innerHTML = selected.modelo;
             document.getElementById("div_imagen").innerHTML = `
-                <img class="card-img-top w-100 h-100 object-fit-cover" src="${t.imagen}" alt="${t.modelo}" />
+                <img class="card-img-top w-100 h-100" src="${t.imagen}" alt="${t.modelo}" />
             `;
             document.getElementById("tallas").innerHTML = '';
             t.talla.forEach((t2,index) => {
