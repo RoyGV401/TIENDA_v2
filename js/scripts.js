@@ -89,8 +89,8 @@ function loadShoes() {
 
     busca.forEach(t => {
         html += `
-            <div class="col mb-5">
-    <div class="card h-100 d-flex flex-column">
+            <div class=" col mb-5" >
+    <div class="btn card h-100 d-flex flex-column" id="teni${t.idTeni}" data-bs-toggle="modal" data-bs-target="#carrito_modal">
         <!-- Product image container with fixed aspect ratio -->
         <div class="image-container" style="height: 200px; ">
             <img class="card-img-top w-100 h-100 object-fit-cover" src="${t.imagen}" alt="${t.modelo}" />
@@ -114,6 +114,8 @@ function loadShoes() {
     </div>
 </div>
         `;
+
+        
     });
 
     document.getElementById("contenedor").innerHTML = html;
@@ -133,9 +135,10 @@ function loadShoes() {
             carrito_contador.innerHTML = carrito.length;
             this.innerHTML = "Agregado!";
             }
-            
-
         };
+        document.getElementById("teni"+t.idTeni).onclick = function(){
+            alert(t.marca);
+        }
     });
 
     document.getElementById("cartButton").onclick = function () {
