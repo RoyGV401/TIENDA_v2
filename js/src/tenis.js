@@ -4,11 +4,11 @@ export const TENIS = [
     marca: "New Balance",
     modelo: "NMD",
     color: "Azul",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 4700,
     fecha: "01-04-2022",
     valoracion: 3.5,
@@ -20,11 +20,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Gazelle",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 7600,
     fecha: "13-03-2025",
     valoracion: 4.7,
@@ -36,11 +36,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Stan Smith",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 7100,
     fecha: "15-07-2022",
     valoracion: 3.1,
@@ -52,11 +52,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Zoom Fly",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 9500,
     fecha: "25-08-2022",
     valoracion: 4.9,
@@ -68,11 +68,11 @@ export const TENIS = [
     marca: "Reebok",
     modelo: "Max",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 12200,
     fecha: "20-12-2024",
     valoracion: 3.7,
@@ -84,11 +84,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Ultraboost",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 12300,
     fecha: "20-08-2023",
     valoracion: 3.7,
@@ -100,11 +100,11 @@ export const TENIS = [
     marca: "Reebok",
     modelo: "Ultraboost",
     color: "Gris",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 7400,
     fecha: "22-05-2021",
     valoracion: 3,
@@ -116,11 +116,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Ignite",
     color: "Azul",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 8600,
     fecha: "03-03-2023",
     valoracion: 3.4,
@@ -132,11 +132,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Samba",
     color: "Azul",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 6200,
     fecha: "07-05-2024",
     valoracion: 3.8,
@@ -148,11 +148,11 @@ export const TENIS = [
     marca: "Reebok",
     modelo: "Comfit",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 13500,
     fecha: "21-12-2022",
     valoracion: 4.9,
@@ -164,11 +164,11 @@ export const TENIS = [
     marca: "Sparx",
     modelo: "Air Max 90",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 4700,
     fecha: "03-10-2023",
     valoracion: 3.2,
@@ -180,11 +180,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Yeezy Boost",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 12400,
     fecha: "22-11-2023",
     valoracion: 4.9,
@@ -196,11 +196,11 @@ export const TENIS = [
     marca: "Puma",
     modelo: "Future Rider",
     color: "Rojo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 13300,
     fecha: "10-01-2024",
     valoracion: 4.7,
@@ -212,11 +212,11 @@ export const TENIS = [
     marca: "Skechers",
     modelo: "UNO",
     color: "Azul",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 13300,
     fecha: "08-05-2021",
     valoracion: 3.9,
@@ -228,11 +228,11 @@ export const TENIS = [
     marca: "Bata",
     modelo: "Power",
     color: "Rojo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 7100,
     fecha: "20-04-2024",
     valoracion: 3.7,
@@ -244,11 +244,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Zoom Fly",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 8500,
     fecha: "28-09-2021",
     valoracion: 3.5,
@@ -260,11 +260,11 @@ export const TENIS = [
     marca: "Puma",
     modelo: "Clyde",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 11100,
     fecha: "10-07-2024",
     valoracion: 4.2,
@@ -276,11 +276,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Zoom Fly",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 7300,
     fecha: "28-01-2024",
     valoracion: 3.1,
@@ -292,11 +292,11 @@ export const TENIS = [
     marca: "Puma",
     modelo: "Classic Leather",
     color: "Amarillo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 8500,
     fecha: "23-02-2023",
     valoracion: 3,
@@ -308,11 +308,11 @@ export const TENIS = [
     marca: "Puma",
     modelo: "Future Rider",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 6400,
     fecha: "22-08-2021",
     valoracion: 3.9,
@@ -324,11 +324,11 @@ export const TENIS = [
     marca: "Bata",
     modelo: "Yeezy Boost",
     color: "Amarillo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 9500,
     fecha: "16-05-2022",
     valoracion: 3.1,
@@ -340,11 +340,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Stan Smith",
     color: "Rojo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 4500,
     fecha: "17-05-2021",
     valoracion: 3.5,
@@ -356,11 +356,11 @@ export const TENIS = [
     marca: "Paragon",
     modelo: "SS-421",
     color: "Amarillo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 13600,
     fecha: "29-01-2022",
     valoracion: 3.4,
@@ -372,11 +372,11 @@ export const TENIS = [
     marca: "Bata",
     modelo: "SM-162",
     color: "Rojo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 4900,
     fecha: "09-11-2022",
     valoracion: 3.5,
@@ -388,11 +388,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Stan Smith",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 10200,
     fecha: "05-02-2024",
     valoracion: 3.3,
@@ -404,11 +404,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Thunder Spectra",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 7700,
     fecha: "25-03-2024",
     valoracion: 3,
@@ -420,11 +420,11 @@ export const TENIS = [
     marca: "Sparx",
     modelo: "SF-871",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 10900,
     fecha: "27-10-2023",
     valoracion: 3.2,
@@ -436,11 +436,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "NMD",
     color: "Rojo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 15500,
     fecha: "08-03-2023",
     valoracion: 4.2,
@@ -452,11 +452,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Air Max 90",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 11700,
     fecha: "09-11-2021",
     valoracion: 4.9,
@@ -468,11 +468,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Max",
     color: "Rojo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 4400,
     fecha: "08-06-2021",
     valoracion: 5,
@@ -484,11 +484,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "NMD",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 9200,
     fecha: "06-03-2024",
     valoracion: 3.8,
@@ -500,11 +500,11 @@ export const TENIS = [
     marca: "New Balance",
     modelo: "Vertex",
     color: "Rojo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 10100,
     fecha: "04-03-2021",
     valoracion: 3.3,
@@ -516,11 +516,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Air Max 90",
     color: "Gris",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 10400,
     fecha: "28-09-2021",
     valoracion: 4.3,
@@ -532,11 +532,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Stimulus",
     color: "Gris",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 12200,
     fecha: "23-06-2022",
     valoracion: 4,
@@ -548,11 +548,11 @@ export const TENIS = [
     marca: "Reebok",
     modelo: "Classic Leather",
     color: "Rojo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 7300,
     fecha: "01-08-2021",
     valoracion: 5,
@@ -564,11 +564,11 @@ export const TENIS = [
     marca: "Sparx",
     modelo: "Thunder Spectra",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 5500,
     fecha: "07-03-2022",
     valoracion: 3.1,
@@ -580,11 +580,11 @@ export const TENIS = [
     marca: "Bata",
     modelo: "SF-871",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 8700,
     fecha: "16-04-2021",
     valoracion: 4.6,
@@ -596,11 +596,11 @@ export const TENIS = [
     marca: "Paragon",
     modelo: "RS-X",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 15500,
     fecha: "14-03-2023",
     valoracion: 3.6,
@@ -612,11 +612,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Air Max 90",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 6200,
     fecha: "29-09-2023",
     valoracion: 3.5,
@@ -628,11 +628,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Cali",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 14800,
     fecha: "04-03-2024",
     valoracion: 4.3,
@@ -644,11 +644,11 @@ export const TENIS = [
     marca: "Puma",
     modelo: "SM-162",
     color: "Amarillo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 10500,
     fecha: "14-04-2022",
     valoracion: 3.5,
@@ -660,11 +660,11 @@ export const TENIS = [
     marca: "Puma",
     modelo: "Suede Classic",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 9500,
     fecha: "29-04-2023",
     valoracion: 4.3,
@@ -676,11 +676,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Vertex",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 14600,
     fecha: "24-12-2024",
     valoracion: 4,
@@ -692,11 +692,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Classic Leather",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 9500,
     fecha: "21-05-2023",
     valoracion: 3.8,
@@ -708,11 +708,11 @@ export const TENIS = [
     marca: "Reebok",
     modelo: "Samba",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 12700,
     fecha: "20-10-2024",
     valoracion: 4.1,
@@ -724,11 +724,11 @@ export const TENIS = [
     marca: "Sparx",
     modelo: "SS-421",
     color: "Azul",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 8800,
     fecha: "24-01-2024",
     valoracion: 3.6,
@@ -740,11 +740,11 @@ export const TENIS = [
     marca: "Reebok",
     modelo: "Gazelle",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 14800,
     fecha: "12-12-2023",
     valoracion: 4.4,
@@ -756,11 +756,11 @@ export const TENIS = [
     marca: "Reebok",
     modelo: "Comfit",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 12300,
     fecha: "03-02-2021",
     valoracion: 3.8,
@@ -772,11 +772,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Yeezy Boost",
     color: "Amarillo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 12400,
     fecha: "21-05-2021",
     valoracion: 3.7,
@@ -788,11 +788,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Ultraboost",
     color: "Azul",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 7900,
     fecha: "23-05-2021",
     valoracion: 4.7,
@@ -804,11 +804,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Cali",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 13100,
     fecha: "21-04-2022",
     valoracion: 4.8,
@@ -820,11 +820,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "SL-147",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 11600,
     fecha: "18-03-2025",
     valoracion: 3.1,
@@ -836,11 +836,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Ignite",
     color: "Gris",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 6900,
     fecha: "11-04-2023",
     valoracion: 3.5,
@@ -852,11 +852,11 @@ export const TENIS = [
     marca: "Puma",
     modelo: "Suede Classic",
     color: "Gris",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 5900,
     fecha: "28-06-2021",
     valoracion: 3.7,
@@ -868,11 +868,11 @@ export const TENIS = [
     marca: "Adidas",
     modelo: "Superstar",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 13600,
     fecha: "02-11-2022",
     valoracion: 4.6,
@@ -884,11 +884,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Astro",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 15500,
     fecha: "01-02-2024",
     valoracion: 5,
@@ -900,11 +900,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Air Max 90",
     color: "Azul",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 9500,
     fecha: "04-04-2025",
     valoracion: 4.9,
@@ -916,11 +916,11 @@ export const TENIS = [
     marca: "New Balance",
     modelo: "SM-306",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 11100,
     fecha: "28-11-2023",
     valoracion: 4.8,
@@ -932,11 +932,11 @@ export const TENIS = [
     marca: "Puma",
     modelo: "Thunder Spectra",
     color: "Verde",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 14300,
     fecha: "10-04-2023",
     valoracion: 3.6,
@@ -948,11 +948,11 @@ export const TENIS = [
     marca: "Bullpadel",
     modelo: "Vertex",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 9500,
     fecha: "14-03-2023",
     valoracion: 5,
@@ -964,11 +964,11 @@ export const TENIS = [
     marca: "Champion",
     modelo: "Power",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 15400,
     fecha: "26-08-2023",
     valoracion: 3.5,
@@ -980,11 +980,11 @@ export const TENIS = [
     marca: "Puma",
     modelo: "Suede Classic",
     color: "Amarillo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 10900,
     fecha: "08-11-2021",
     valoracion: 3.2,
@@ -996,11 +996,11 @@ export const TENIS = [
     marca: "Reebok",
     modelo: "Classic Leather",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 13800,
     fecha: "15-01-2024",
     valoracion: 4.9,
@@ -1012,11 +1012,11 @@ export const TENIS = [
     marca: "Bullpadel",
     modelo: "Vertex",
     color: "Amarillo",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 14900,
     fecha: "18-08-2023",
     valoracion: 3.5,
@@ -1028,11 +1028,11 @@ export const TENIS = [
     marca: "Puma",
     modelo: "Thunder Spectra",
     color: "Azul",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 13800,
     fecha: "25-04-2023",
     valoracion: 4.4,
@@ -1044,11 +1044,11 @@ export const TENIS = [
     marca: "New Balance",
     modelo: "Fresh Foam",
     color: "Gris",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 5900,
     fecha: "15-10-2021",
     valoracion: 3.1,
@@ -1060,11 +1060,11 @@ export const TENIS = [
     marca: "New Balance",
     modelo: "SM-306",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 11500,
     fecha: "17-12-2021",
     valoracion: 4.5,
@@ -1076,11 +1076,11 @@ export const TENIS = [
     marca: "Nike",
     modelo: "Air Max 97",
     color: "Blanco",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 8800,
     fecha: "16-01-2021",
     valoracion: 4.8,
@@ -1092,11 +1092,11 @@ export const TENIS = [
     marca: "New Balance",
     modelo: "Fresh Foam",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 4800,
     fecha: "20-07-2024",
     valoracion: 3.5,
@@ -1108,11 +1108,11 @@ export const TENIS = [
     marca: "Nikes",
     modelo: "Ambassador",
     color: "Negro",
-    talla: {
-       talla1: 24,
-       talla2: 26,
-       talla3: 28
-    },
+    talla: [
+        24,
+        26,
+        28
+    ],
     precio: 9100,
     fecha: "05-07-2024",
     valoracion: 3.8,

@@ -21,6 +21,8 @@ var palabra = "";
 
 var carrito = [];
 
+var selected;
+
 window.onload = function(){
 
     loadShoes();
@@ -90,26 +92,29 @@ function loadShoes() {
     busca.forEach(t => {
         html += `
             <div class=" col mb-5" >
-    <div class="btn card h-100 d-flex flex-column" id="teni${t.idTeni}" data-bs-toggle="modal" data-bs-target="#carrito_modal">
+    <div class="btn card h-100 d-flex flex-column" id="teni${t.idTeni}" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <!-- Product image container with fixed aspect ratio -->
+        <h5 class="fw-bolder mb-2 my-3">${t.marca}</h5>
         <div class="image-container" style="height: 200px; ">
             <img class="card-img-top w-100 h-100 object-fit-cover" src="${t.imagen}" alt="${t.modelo}" />
         </div>
         <!-- Product details -->
-        <div class="card-body p-4 d-flex flex-column">
+        <div class="card-body p-4 pb-0 d-flex flex-column">
             <div class="text-center mt-auto">
                 <!-- Product name -->
-                <h5 class="fw-bolder mb-1">${t.modelo}</h5>
-                <h5 class="fw-bolder mb-2">${t.marca}</h5>
+                <label><h5 class="fw-bolder mb-1">${t.modelo}:</h5></label>
+                
                 <!-- Product price -->
-                <div class="price mb-2">$${t.precio}</div>
+                <label><div class="price mb-2">$${t.precio}</div></label>
+                <div class="card-body p-0">
+                          <div class="star-rating" id="starRating${t.idTeni}">
+                          </div>
+                      </div>
             </div>
         </div>
         <!-- Product actions -->
         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent mt-auto">
-            <div class="text-center">
-                <button type="button" id="btn_${t.idTeni}" class="btn btn-outline-dark mt-auto">Agregar al 🛒</button>
-            </div>
+            
         </div>
     </div>
 </div>
@@ -118,12 +123,47 @@ function loadShoes() {
         
     });
 
+    
+   
+
     document.getElementById("contenedor").innerHTML = html;
     let carrito_contador = document.getElementById("contador");
     
     busca.forEach(t => {
-        document.getElementById("btn_" + t.idTeni).onclick = function () {
-            if(this.innerHTML=="Agregado!"){
+        updateStarRatingByID(t.valoracion,"starRating"+t.idTeni);
+        document.getElementById("teni"+t.idTeni).onclick = function(){
+
+            
+             
+            
+            
+
+            selected = t;
+            document.getElementById("nombreTeni").innerHTML = selected.modelo;
+            document.getElementById("div_imagen").innerHTML = `
+                <img class="card-img-top w-100 h-100 object-fit-cover" src="${t.imagen}" alt="${t.modelo}" />
+            `;
+            document.getElementById("tallas").innerHTML = '';
+            t.talla.forEach((t2,index) => {
+                document.getElementById("tallas").innerHTML += `
+                <input type="radio" class="btn-check" name="options" id="option${index}" autocomplete="off" value="${t2}">
+                <label class="btn btn-outline-dark mb-2" for="option${index}">${t2}</label>
+            `;
+            });
+
+            if(carrito.find(s => s==t)){
+                document.getElementById("btn_c").innerHTML = `
+                <button type="button" id="agregaC${t.idTeni}" class="btn btn-outline-dark mt-auto">Agregado!</button>
+            `;
+            }else{
+                document.getElementById("btn_c").innerHTML = `
+                <button type="button" id="agregaC${t.idTeni}" class="btn btn-outline-dark mt-auto">Agregar al 🛒</button>
+            `;
+            }
+           
+            console.log("agregaC"+t.idTeni);
+        document.getElementById("agregaC"+t.idTeni).onclick = function () {
+            if(carrito.find(s => s==t)){
                 let index = carrito.findIndex(item => item.idTeni === t.idTeni);
                 if (index !== -1) {
                     carrito.splice(index, 1);
@@ -136,10 +176,15 @@ function loadShoes() {
             this.innerHTML = "Agregado!";
             }
         };
-        document.getElementById("teni"+t.idTeni).onclick = function(){
-            alert(t.marca);
+            
+
         }
     });
+
+    busca.forEach(t => {
+        
+    });
+
 
     document.getElementById("cartButton").onclick = function () {
         let html = ``;
@@ -245,3 +290,104 @@ function cargarFiltro(arreglo,id){
     });
 }
 
+function updateStarRatingByID(rating, id) {
+    const starRatingElement = document.getElementById(id);
+   
+    
+    starRatingElement.innerHTML = '';
+   
+    
+    // Redondear a 1 decimal para evitar problemas de precisión
+    rating = Math.round(rating * 10) / 10;
+    
+    const fullStars = Math.floor(rating);
+    const decimalPart = rating % 1;
+    const emptyStars = 5 - Math.ceil(rating);
+    
+    // Añadir estrellas llenas
+    for (let i = 0; i < fullStars; i++) {
+        const star = document.createElement('i');
+        star.className = 'bi bi-star-fill';
+        starRatingElement.appendChild(star);
+    }
+    
+    // Añadir estrella parcial si hay decimal
+    if (decimalPart > 0) {
+        const starContainer = document.createElement('div');
+        starContainer.className = 'd-inline-block position-relative';
+        starContainer.style.width = '1.5rem'; // Mismo ancho que las estrellas
+        
+        const emptyStar = document.createElement('i');
+        emptyStar.className = 'bi bi-star';
+        
+        const partialStar = document.createElement('div');
+        partialStar.className = 'position-absolute top-0 start-0 overflow-hidden';
+        partialStar.style.width = `${decimalPart * 100}%`;
+        
+        const partialStarIcon = document.createElement('i');
+        partialStarIcon.className = 'bi bi-star-fill';
+        
+        partialStar.appendChild(partialStarIcon);
+        starContainer.appendChild(emptyStar);
+        starContainer.appendChild(partialStar);
+        starRatingElement.appendChild(starContainer);
+    }
+    
+    // Añadir estrellas vacías
+    for (let i = 0; i < emptyStars; i++) {
+        const star = document.createElement('i');
+        star.className = 'bi bi-star';
+        starRatingElement.appendChild(star);
+    }
+}
+
+function updateStarRating(rating) {
+    const starRatingElement = document.getElementById('starRating');
+    const ratingValueElement = document.getElementById('ratingValue');
+    
+    starRatingElement.innerHTML = '';
+    ratingValueElement.textContent = rating;
+    
+    // Redondear a 1 decimal para evitar problemas de precisión
+    rating = Math.round(rating * 10) / 10;
+    
+    const fullStars = Math.floor(rating);
+    const decimalPart = rating % 1;
+    const emptyStars = 5 - Math.ceil(rating);
+    
+    // Añadir estrellas llenas
+    for (let i = 0; i < fullStars; i++) {
+        const star = document.createElement('i');
+        star.className = 'bi bi-star-fill';
+        starRatingElement.appendChild(star);
+    }
+    
+    // Añadir estrella parcial si hay decimal
+    if (decimalPart > 0) {
+        const starContainer = document.createElement('div');
+        starContainer.className = 'd-inline-block position-relative';
+        starContainer.style.width = '1.5rem'; // Mismo ancho que las estrellas
+        
+        const emptyStar = document.createElement('i');
+        emptyStar.className = 'bi bi-star';
+        
+        const partialStar = document.createElement('div');
+        partialStar.className = 'position-absolute top-0 start-0 overflow-hidden';
+        partialStar.style.width = `${decimalPart * 100}%`;
+        
+        const partialStarIcon = document.createElement('i');
+        partialStarIcon.className = 'bi bi-star-fill';
+        
+        partialStar.appendChild(partialStarIcon);
+        starContainer.appendChild(emptyStar);
+        starContainer.appendChild(partialStar);
+        starRatingElement.appendChild(starContainer);
+    }
+    
+    // Añadir estrellas vacías
+    for (let i = 0; i < emptyStars; i++) {
+        const star = document.createElement('i');
+        star.className = 'bi bi-star';
+        starRatingElement.appendChild(star);
+    }
+}
