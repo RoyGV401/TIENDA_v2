@@ -98,7 +98,7 @@ function loadShoes() {
     
     <!-- Image container with square shape and white background -->
     <div class="image-square bg-white d-flex align-items-center justify-content-center">
-      <img src="${t.imagen}" alt="${t.modelo}" class="img-fluid rounded" style="max-height: 100%; max-width: 100%; object-fit: contain;" />
+      <img src="${t.imagen}" alt="${t.modelo}" class="img-fluid rounded product-img" style="max-height: 100%; max-width: 100%; object-fit: contain;" />
     </div>
 
     <!-- Product details -->

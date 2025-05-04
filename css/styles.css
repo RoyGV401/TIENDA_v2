@@ -10837,10 +10837,20 @@ textarea.form-control-lg {
   }
 }
 
-img:hover {
+.product-img:hover {
   opacity: 0.7;
   transform: scale(1.1);
   transition: all 0.3s ease;
+}
+
+.carousel-image{
+  width: 100%;
+  object-position: center;
+}
+
+.carousel-astonian
+{
+  height: 30vmax;
 }
 
 .generic-transition-1
