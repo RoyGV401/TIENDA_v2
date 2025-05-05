@@ -213,15 +213,40 @@ function loadShoes() {
 
 
     document.getElementById("cartButton").onclick = function () {
-        let html = ``;
-        carrito.forEach(c => {
-            html += `<p>${c.marca}-${c.modelo}-${c.talla}</p>`;
-        });
-        document.getElementById("carrito_modal_body").innerHTML = html;
-    };
+        cargarCarro();
+        cargabotones();
+    }
+
 }
 
+function cargarCarro(){
+    let html = ``;
+        let total = 0;
+        carrito.forEach(c => {
+            html += ` 
+            <div class="row g-3 w-100 mb-2 align-items-center align-content-center">
+            
+            <img class="w-25 col-4" src="${c.imagen}">
+            <p class="m-0 py-2 col-6">${c.marca}-${c.modelo}-${c.talla}:    $${c.precio}</p>
+           <button class="col-2 mt-0 btn btn-light py-2"style ="float:right;" id=elimina_${c.idTeni}>Eliminar</button>
+            </div>
+           `;
+            total += c.precio;
+        });
+        html += `<h3>Total:$ ${total}</h3>`;
+        document.getElementById("carrito_modal_body").innerHTML = html;
+        cargabotones();
+}
 
+function cargabotones(){
+    carrito.forEach((c) => {
+        document.getElementById("elimina_"+c.idTeni).onclick = function (){
+            carrito.splice(carrito.findIndex(s=> s.idTeni==c.idTeni),1);
+            document.getElementById("contador").innerText = carrito.length;
+            cargarCarro();
+        }
+    });
+}
 
 function getBrands()
 {
