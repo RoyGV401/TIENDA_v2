@@ -90,10 +90,11 @@
     scroll-behavior: smooth;
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Cal+Sans&display=swap');
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -10843,6 +10844,23 @@ textarea.form-control-lg {
   transition: all 0.3s ease;
 }
 
+.presentation-image
+{
+  background-image: url("/resources/header_img.jpg");
+}
+
+.darken
+{
+  filter: brightness(80%);
+}
+
+.lighten
+{
+  filter: brightness(100%);
+
+}
+
+
 .carousel-image{
   width: 100%;
   object-position: center;
@@ -10851,6 +10869,11 @@ textarea.form-control-lg {
 .carousel-astonian
 {
   height: 30vmax;
+}
+
+.bg-astonian
+{
+  background-color: #06357a;
 }
 
 .generic-transition-1
@@ -10897,4 +10920,27 @@ html, body {
 #imagen_preview:hover{
   transform: scale(1.6);
   transition: all 0.3s ease;
+}
+
+.boldest
+{
+  font-weight: 900;
+}
+
+.anton-sc {
+  font-family: "Cal Sans", sans-serif;
+}
+
+.cal-sans {
+  font-family: "Cal Sans", sans-serif;
+}
+
+.larger
+{
+  font-size: 5vmax;
+}
+
+.largest
+{
+  font-size: 7vmax;
 }
