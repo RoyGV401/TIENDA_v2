@@ -19,14 +19,15 @@
     </head>
     <body>
 
+      
         <!-- Navigation-->
-        <nav id="second_bar" class="navbar navbar-expand-lg navbar-light bg-light sticky-header" style="z-index: 999;">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand  boldest cal-sans" href="#!">Astonian Wear</a>
+        <nav id="second_bar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="z-index: 999;">
+            <div class="container-fluid px-4 px-lg-5">
+                <a class="navbar-brand  boldest cal-sans" href="index.html">Astonian Wear</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Inicio</a></li>
+                        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page" href="#!">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!"  data-bs-toggle="modal" data-bs-target="#whoModal">Nosotros</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
@@ -103,25 +104,24 @@
       </div>
 
       <div id="filtroDiv" class="container-sm rounded-m mt-0 mb-0 pt-0 px-0 w-75">
-            <div class="row align-items-center " >
-              <div class="col">
-                <div class="card   p-4 m-0 shadow-sm">
-                        <h2>Color</h2>
-                    <div id="bodyColor" class="row gx-3 align-items-center align-content-center ms-1">
-                    
-                    </div>
-                </div>
-              </div>
-              <div class="col ">
-                <div class="card    p-4 m-0 shadow-sm">
-                    <h2>Marca</h2>  
-                    <div id="bodyMarca" class="row gx-4 align-items-center align-content-center ms-1">
-                      
-                    </div>
-                </div>
+        <div class="row align-items-stretch">
+          <div class="col">
+            <div class="card p-4 h-100 m-0 shadow-sm">
+              <h2>Color</h2>
+              <div id="bodyColor" class="row gx-3 align-items-center align-content-center ms-1">
               </div>
             </div>
+          </div>
+          <div class="col d-flex">
+            <div class="card p-4 h-100 m-0 shadow-sm">
+              <h2>Marca</h2>
+              <div id="bodyMarca" class="row gx-3 align-items-center align-content-center ms-1">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      
           
           
         <!-- Section-->
