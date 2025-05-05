@@ -102,12 +102,12 @@ function loadShoes() {
     </div>
 
     <!-- Product details -->
-    <div class="card-body p-4 pb-0 d-flex flex-column">
+    <div class="card-body p-4 py-0 d-flex flex-column">
       <div class="text-center mt-auto">
         <label><h5 class="fw-bolder mb-1">${t.modelo}:</h5></label>
         <label><div class="price mb-2">$${t.precio}</div></label>
         <div class="card-body p-0">
-          <div class="star-rating" id="starRating${t.idTeni}"></div>
+          <div class="star-rating d-none d-lg-block d-md-block" id="starRating${t.idTeni}"></div>
         </div>
       </div>
     </div>

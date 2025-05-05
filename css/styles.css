@@ -4264,7 +4264,7 @@ textarea.form-control-lg {
 .image-square {
   border-radius: 6px;
   width: 100%;
-  height: 200px;
+  height: 45%;
   background-color: white;
   z-index: 1;
 }
