@@ -138,22 +138,27 @@ function loadShoes() {
             
 
             selected = t;
-            document.getElementById("nombreTeni").innerHTML = selected.modelo;
+            document.getElementById("nombreTeni").innerHTML = selected.marca + " - " +selected.modelo;
+            document.getElementById("stock").innerText = "Disponibles: "+ selected.stock;
+            document.getElementById("precio").innerText = "Precio: $"+ selected.precio; 
             document.getElementById("div_imagen").innerHTML = `
                 <img class="card-img-top w-100 h-100" src="${t.imagen}" alt="${t.modelo}" />
             `;
             document.getElementById("tallas").innerHTML = '';
             t.talla.forEach((t2,index) => {
+                console.log(t.talla);
                 document.getElementById("tallas").innerHTML += `
                 <input type="radio" class="btn-check" name="options" id="option${index}" autocomplete="off" value="${t2}">
                 <label class="btn btn-outline-dark mb-2" for="option${index}">${t2}</label>
             `;
             });
 
-            if(carrito.find(s => s==t)){
+            if(carrito.find(s => s.idTeni==t.idTeni)){
                 document.getElementById("btn_c").innerHTML = `
                 <button type="button" id="agregaC${t.idTeni}" class="btn btn-outline-dark mt-auto">Agregado!</button>
             `;
+               
+                document.getElementById("option"+t.talla.findIndex(s => s==(carrito.find(r=>r.idTeni==t.idTeni)).talla)).checked = true;
             }else{
                 document.getElementById("btn_c").innerHTML = `
                 <button type="button" id="agregaC${t.idTeni}" class="btn btn-outline-dark mt-auto">Agregar al 🛒</button>
@@ -161,21 +166,47 @@ function loadShoes() {
             }
            
             console.log("agregaC"+t.idTeni);
-        document.getElementById("agregaC"+t.idTeni).onclick = function () {
-            if(carrito.find(s => s==t)){
-                let index = carrito.findIndex(item => item.idTeni === t.idTeni);
-                if (index !== -1) {
-                    carrito.splice(index, 1);
-                    carrito_contador.innerHTML = carrito.length;
+            document.getElementById("agregaC"+t.idTeni).onclick = function () {
+                
+                
+                if(document.querySelector('input[name="options"]:checked')){
+                    const radioSeleccionado = document.querySelector('input[name="options"]:checked');
+              
+                    if(carrito.find(s => s.idTeni==t.idTeni)){
+                        
+                        let index = carrito.findIndex(item => item.idTeni === t.idTeni);
+                        if (index !== -1) {
+                            carrito.splice(index, 1);
+                            carrito_contador.innerHTML = carrito.length;
+                        }
+                        this.innerHTML = "Agregar al 🛒";
+                    }else{
+                        let nuevo = structuredClone(t);
+                        nuevo.talla = nuevo.talla.filter(ta => ta==radioSeleccionado.value)
+                        carrito.push(nuevo);
+                        carrito_contador.innerHTML = carrito.length;
+                        this.innerHTML = "Agregado!";
+                      
+                        
+                    }
+                }else{
+                    
+                    const modal1Element = document.getElementById('alertModal');
+                    const modal1 = new bootstrap.Modal(modal1Element);
+                    modal1.show();
+                    let temporizador;
+                    let tiempoRestante = 2;
+                    temporizador = setInterval(() => {
+                        tiempoRestante--;
+                        
+                        
+                        if (tiempoRestante <= 0) {
+                            clearInterval(temporizador);
+                            modal1.hide();
+                        }
+                    }, 1000);
                 }
-                this.innerHTML = "Agregar al 🛒";
-            }else{
-            carrito.push(t);
-            carrito_contador.innerHTML = carrito.length;
-            this.innerHTML = "Agregado!";
-            }
-        };
-            
+            };
 
         }
     });
@@ -188,7 +219,7 @@ function loadShoes() {
     document.getElementById("cartButton").onclick = function () {
         let html = ``;
         carrito.forEach(c => {
-            html += `<p>${c.marca}</p>`;
+            html += `<p>${c.marca}-${c.modelo}-${c.talla}</p>`;
         });
         document.getElementById("carrito_modal_body").innerHTML = html;
     };

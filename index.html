@@ -175,7 +175,7 @@
 
     <extra>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade top-22" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -186,11 +186,12 @@
                 <div  class="col w-100 h-100" id="div_imagen">
 
                 </div>
-                <div class="col w-100 h-100 text-center">
-                    <label for="tallas">Tallas disponibles:</label>
+                <div class="col w-100 h-auto  align-content-center">
+                    <label for="tallas" class="mb-4">Tallas:</label>
                     <div class="btn-group" role="group" aria-label="Opciones de radio" id="tallas">
                     </div>
-                    
+                    <p id="stock" class="mb-4">Disponibles: </p>
+                    <p id="precio" class="my-4">Precio: $</p>
                       
                 
                 </div>
@@ -228,6 +229,18 @@
             </div>
           </div>
 
+
+          <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h5 class="modal-title text-center" id="exampleModalLabel">Ingresa una talla</h5>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
 
 
         <div class="modal" tabindex="-1" id="whoModal">
