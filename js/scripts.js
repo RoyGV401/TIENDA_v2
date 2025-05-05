@@ -142,7 +142,7 @@ function loadShoes() {
             document.getElementById("stock").innerText = "Disponibles: "+ selected.stock;
             document.getElementById("precio").innerText = "Precio: $"+ selected.precio; 
             document.getElementById("div_imagen").innerHTML = `
-                <img class="card-img-top w-100 h-100" src="${t.imagen}" alt="${t.modelo}" />
+                <img id="imagen_preview" class="card-img-top w-100 h-100" src="${t.imagen}" alt="${t.modelo}" />
             `;
             document.getElementById("tallas").innerHTML = '';
             t.talla.forEach((t2,index) => {
@@ -180,7 +180,10 @@ function loadShoes() {
                         carrito_contador.innerHTML = carrito.length;
                         this.innerHTML = "Agregado!";
                       
-                        
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+
+                        // Cerrar el modal
+                        modal.hide();
                     }
                 }else{
                     

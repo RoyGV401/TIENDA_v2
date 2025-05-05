@@ -10888,3 +10888,13 @@ textarea.form-control-lg {
 .top-22 {
   top: 22% !important;
 }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#imagen_preview:hover{
+  transform: scale(1.6);
+  transition: all 0.3s ease;
+}
