@@ -153,17 +153,11 @@ function loadShoes() {
             `;
             });
 
-            if(carrito.find(s => s.idTeni==t.idTeni)){
-                document.getElementById("btn_c").innerHTML = `
-                <button type="button" id="agregaC${t.idTeni}" class="btn btn-outline-dark mt-auto">Agregado!</button>
-            `;
-               
-                document.getElementById("option"+t.talla.findIndex(s => s==(carrito.find(r=>r.idTeni==t.idTeni)).talla)).checked = true;
-            }else{
+           
                 document.getElementById("btn_c").innerHTML = `
                 <button type="button" id="agregaC${t.idTeni}" class="btn btn-outline-dark mt-auto">Agregar al 🛒</button>
             `;
-            }
+            
            
             console.log("agregaC"+t.idTeni);
             document.getElementById("agregaC"+t.idTeni).onclick = function () {
@@ -172,8 +166,7 @@ function loadShoes() {
                 if(document.querySelector('input[name="options"]:checked')){
                     const radioSeleccionado = document.querySelector('input[name="options"]:checked');
               
-                    if(carrito.find(s => s.idTeni==t.idTeni)){
-                        
+                    if(carrito.find(s => s==t)){
                         let index = carrito.findIndex(item => item.idTeni === t.idTeni);
                         if (index !== -1) {
                             carrito.splice(index, 1);
