@@ -270,8 +270,8 @@ function loadFiltro(){
 
     let filtro = document.getElementById("filtroDiv");
     let btn = document.getElementById("btn_filtro");
-    cargarFiltro(colors,"trBody");
-    cargarFiltro(brands,"trBody2");
+    cargarFiltro(colors,"bodyColor");
+    cargarFiltro(brands,"bodyMarca");
     filtro.hidden = true;
     btn.onclick = function(){
         if(filtro.hidden == true){
@@ -290,30 +290,26 @@ function loadFiltro(){
 function cargarFiltro(arreglo,id){
     let trBody = document.getElementById(id);
     
-    let newTD = document.createElement("td");
+   
     
     arreglo.forEach((c, index) => {
         const checkboxId = `checkbox-${index}`;
-        newTD.innerHTML += `
-            <div class="form-check">
+        trBody.innerHTML += `
+            <div class="form-check col-md-4 col-lg-4 col-sm-6">
                 <input class="form-check-input" type="checkbox" value="${c}" id="${c}${checkboxId}">
-                <label class="form-check-label" for="${checkboxId}">
+                <label class="form-check-label p-0" for="${checkboxId}">
                     ${c}
                 </label>
             </div>
         `;
     
-        if ((index + 1) % 3 === 0) {
-            trBody.appendChild(newTD);
-            newTD = document.createElement("td");
-        }
+      
 
         
     });
 
-    if (arreglo.length % 3 !== 0) {
-        trBody.appendChild(newTD);
-    }
+
+
     
 
     arreglo.forEach((c,index) => {
