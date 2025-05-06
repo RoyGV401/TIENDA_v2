@@ -341,7 +341,7 @@ function cargarCarro(){
             <img class="imama col-4" src="${c.imagen}">
             <p class="pString col-5 my-2 mx-1 px-1">${c.modelo}-${c.talla}:    $${c.precio}</p>
             <input id="inputNumero${c.idTeni}" min="0" class=" inputNumero col-1 mb-1 p-0"type="number" value="1"></input>
-           <button class=" my-1 col-2 mt-0 ms-2 btn btn-outline-danger" id=elimina_${c.idTeni}>Eliminar</button>
+           <button class="botonElis my-1 col-2 mt-0 mx-2 btn btn-outline-danger" id=elimina_${c.idTeni}>Eliminar</button>
 
             </div>
            `;
