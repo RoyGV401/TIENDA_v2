@@ -32,7 +32,59 @@ window.onload = function(){
         palabra = this.value;
         loadShoes();
     });
+    document.getElementById("btn_compra").onclick = function(){
+        carrito.forEach(c => {
+           
+                let r;
+                r= tenis.find(s => s.idTeni==c.idTeni);
+
+                if(document.getElementById("inputNumero"+c.idTeni).value <= r.stock){
+                    r.stock -= document.getElementById("inputNumero"+c.idTeni).value;
+
+
+
+
+                    const modal1Element = document.getElementById('alertModal3');
+                    const modal1 = new bootstrap.Modal(modal1Element);
+                    modal1.show();
+                    let temporizador;
+                    let tiempoRestante = 2;
+                    temporizador = setInterval(() => {
+                        tiempoRestante--;
+                        
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('carrito_modal'));
     
+                        // Cerrar el modal
+                        modal.hide();
+                        
+
+                        if (tiempoRestante <= 0) {
+                            clearInterval(temporizador);
+                            modal1.hide();
+                        }
+                    }, 1000);
+                    document.getElementById("contador").innerText = 0;
+                    carrito = [];
+                    loadShoes();
+                }else{
+                    const modal1Element = document.getElementById('alertModal5');
+                    const modal1 = new bootstrap.Modal(modal1Element);
+                    modal1.show();
+                    let temporizador;
+                    let tiempoRestante = 2;
+                    temporizador = setInterval(() => {
+                        tiempoRestante--;
+                        
+                        
+                        if (tiempoRestante <= 0) {
+                            clearInterval(temporizador);
+                            modal1.hide();
+                        }
+                    }, 1000);
+                }
+
+        });
+    }
 }
 
 
@@ -86,6 +138,8 @@ function loadShoes() {
         // a must be equal to b
         return 0;
       });
+
+    busca = busca.filter(s=>s.stock>0);  
     
     document.getElementById("contenedor").innerHTML = "";
 
@@ -174,16 +228,33 @@ function loadShoes() {
                         }
                         this.innerHTML = "Agregar al 🛒";
                     }else{
-                        let nuevo = structuredClone(t);
-                        nuevo.talla = nuevo.talla.filter(ta => ta==radioSeleccionado.value)
-                        carrito.push(nuevo);
-                        carrito_contador.innerHTML = carrito.length;
-                        this.innerHTML = "Agregado!";
-                      
-                        const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
-
-                        // Cerrar el modal
-                        modal.hide();
+                        if(!carrito.find(s=> s.idTeni==t.idTeni)){
+                            var nuevo = structuredClone(t);
+                            nuevo.talla = nuevo.talla.filter(ta => ta==radioSeleccionado.value)
+                            carrito.push(nuevo);
+                            carrito_contador.innerHTML = carrito.length;
+                            this.innerHTML = "Agregado!";
+                          
+                            const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+    
+                            // Cerrar el modal
+                            modal.hide();
+                        }else{
+                            const modal1Element = document.getElementById('alertModal2');
+                            const modal1 = new bootstrap.Modal(modal1Element);
+                            modal1.show();
+                            let temporizador;
+                            let tiempoRestante = 2;
+                            temporizador = setInterval(() => {
+                                tiempoRestante--;
+                                
+                                
+                                if (tiempoRestante <= 0) {
+                                    clearInterval(temporizador);
+                                    modal1.hide();
+                                }
+                            }, 1000);
+                        }
                     }
                 }else{
                     
@@ -218,22 +289,24 @@ function loadShoes() {
     }
 
 }
-
+var total = 0;
 function cargarCarro(){
     let html = ``;
-        let total = 0;
+        total=0;
         carrito.forEach(c => {
             html += ` 
-            <div class="row g-3 w-100 mb-2 align-items-center align-content-center">
+            <div class="row  mb-2 align-items-center">
             
-            <img class="w-25 col-4" src="${c.imagen}">
-            <p class="m-0 py-2 col-6">${c.marca}-${c.modelo}-${c.talla}:    $${c.precio}</p>
-           <button class="col-2 mt-0 btn btn-light py-2"style ="float:right;" id=elimina_${c.idTeni}>Eliminar</button>
+            <img class="imama col-4" src="${c.imagen}">
+            <p class="pString col-5 my-2 mx-1 px-1">${c.modelo}-${c.talla}:    $${c.precio}</p>
+            <input id="inputNumero${c.idTeni}" class=" inputNumero col-1 mb-1 p-0"type="number" value="1"></input>
+           <button class=" my-1 col-2 mt-0 ms-2 btn btn-outline-danger" id=elimina_${c.idTeni}>Eliminar</button>
+
             </div>
            `;
             total += c.precio;
         });
-        html += `<h3>Total:$ ${total}</h3>`;
+        html += `<h4 id="total" class="pe-4 text-end">Total:$ ${total}</h4>`;
         document.getElementById("carrito_modal_body").innerHTML = html;
         cargabotones();
 }
@@ -246,6 +319,23 @@ function cargabotones(){
             cargarCarro();
         }
     });
+    carrito.forEach(c => {
+        document.getElementById("inputNumero"+c.idTeni).addEventListener("input",function(){
+            if(this.value!="")
+            {
+                calcularTotal();
+            }
+        });
+    });
+}
+
+
+function calcularTotal(){
+    total = 0;
+    carrito.forEach(c => {
+        total += c.precio*document.getElementById("inputNumero"+c.idTeni).value;
+    });
+    document.getElementById("total").innerText = "Total:$"+total;
 }
 
 function getBrands()

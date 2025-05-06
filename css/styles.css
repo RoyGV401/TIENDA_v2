@@ -10946,3 +10946,17 @@ html, body {
 }
 
 
+.inputNumero{
+  width: 10%;
+  height: 2.3rem;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.pString{
+  width: 20vmin;
+}
+
+.imama{
+  width: 20vmin;
+}
