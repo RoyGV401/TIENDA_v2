@@ -33,12 +33,27 @@ window.onload = function(){
         loadShoes();
     });
     document.getElementById("btn_compra").onclick = function(){
+        let r;
+        
         carrito.forEach(c => {
+             let error=false;
+        
+        carrito.forEach(c => {
+            r= tenis.find(s => s.idTeni==c.idTeni);
+            console.log(document.getElementById("inputNumero"+c.idTeni).value)
+            if(document.getElementById("inputNumero"+c.idTeni).value<=0||document.getElementById("inputNumero"+c.idTeni).value > r.stock)
+                error=true
+
+        });
            
-                let r;
-                r= tenis.find(s => s.idTeni==c.idTeni);
-                if(document.getElementById("inputNumero"+c.idTeni).value>0)
-                    if(document.getElementById("inputNumero"+c.idTeni).value <= r.stock){
+               
+                    if(!error){
+                        carrito.forEach(c => {
+                            r= tenis.find(s => s.idTeni==c.idTeni);
+                            r.stock -= document.getElementById("inputNumero"+c.idTeni).value;
+                            
+                
+                        });
                         r.stock -= document.getElementById("inputNumero"+c.idTeni).value;
 
 
@@ -82,24 +97,7 @@ window.onload = function(){
                             }
                         }, 1000);
                     }
-                else{
-                    const modal1Element = document.getElementById('alertModal7');
-                        const modal1 = new bootstrap.Modal(modal1Element,{
-                            backdrop: false // Elimina el fondo oscuro
-                        });
-                        modal1.show();
-                        let temporizador;
-                        let tiempoRestante = 2;
-                        temporizador = setInterval(() => {
-                            tiempoRestante--;
-                            
-                            
-                            if (tiempoRestante <= 0) {
-                                clearInterval(temporizador);
-                                modal1.hide();
-                            }
-                        }, 1000);
-                }
+                
                     
         });
     }
