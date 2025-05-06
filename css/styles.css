@@ -10917,10 +10917,7 @@ html, body {
   width: 100%;
 }
 
-#imagen_preview:hover{
-  transform: scale(1.6);
-  transition: all 0.3s ease;
-}
+
 
 .boldest
 {
