@@ -33,39 +33,45 @@ window.onload = function(){
         loadShoes();
     });
     document.getElementById("btn_compra").onclick = function(){
+        let error=false;
+        
         carrito.forEach(c => {
-           
+            console.log(document.getElementById("inputNumero"+c.idTeni).value)
+            if(document.getElementById("inputNumero"+c.idTeni).value<=0||document.getElementById("inputNumero"+c.idTeni).value > r.stock)
+                error=true
+
+        });
+        carrito.forEach(c => {
                 let r;
                 r= tenis.find(s => s.idTeni==c.idTeni);
-                if(document.getElementById("inputNumero"+c.idTeni).value>0)
-                    if(document.getElementById("inputNumero"+c.idTeni).value <= r.stock){
-                        r.stock -= document.getElementById("inputNumero"+c.idTeni).value;
+                if(!error){
+                    r.stock -= document.getElementById("inputNumero"+c.idTeni).value;
 
 
 
 
-                        const modal1Element = document.getElementById('alertModal3');
-                        const modal1 = new bootstrap.Modal(modal1Element);
-                        modal1.show();
-                        let temporizador;
-                        let tiempoRestante = 2;
-                        temporizador = setInterval(() => {
-                            tiempoRestante--;
-                            
-                            const modal = bootstrap.Modal.getInstance(document.getElementById('carrito_modal'));
-        
-                            // Cerrar el modal
-                            modal.hide();
-                            
+                    const modal1Element = document.getElementById('alertModal3');
+                    const modal1 = new bootstrap.Modal(modal1Element);
+                    modal1.show();
+                    let temporizador;
+                    let tiempoRestante = 2;
+                    temporizador = setInterval(() => {
+                        tiempoRestante--;
+                        
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('carrito_modal'));
+    
+                        // Cerrar el modal
+                        modal.hide();
+                        
 
-                            if (tiempoRestante <= 0) {
-                                clearInterval(temporizador);
-                                modal1.hide();
-                            }
-                        }, 1000);
-                        document.getElementById("contador").innerText = 0;
-                        carrito = [];
-                        loadShoes();
+                        if (tiempoRestante <= 0) {
+                            clearInterval(temporizador);
+                            modal1.hide();
+                        }
+                    }, 1000);
+                    document.getElementById("contador").innerText = 0;
+                    carrito = [];
+                    loadShoes();
                     }else{
                         const modal1Element = document.getElementById('alertModal5');
                         const modal1 = new bootstrap.Modal(modal1Element);
@@ -81,25 +87,11 @@ window.onload = function(){
                                 modal1.hide();
                             }
                         }, 1000);
-                    }
-                else{
-                    const modal1Element = document.getElementById('alertModal7');
-                        const modal1 = new bootstrap.Modal(modal1Element,{
-                            backdrop: false // Elimina el fondo oscuro
-                        });
-                        modal1.show();
-                        let temporizador;
-                        let tiempoRestante = 2;
-                        temporizador = setInterval(() => {
-                            tiempoRestante--;
-                            
-                            
-                            if (tiempoRestante <= 0) {
-                                clearInterval(temporizador);
-                                modal1.hide();
-                            }
-                        }, 1000);
                 }
+                    
+                       
+                    
+                
                     
         });
     }
@@ -218,7 +210,6 @@ function loadShoes() {
             `;
             document.getElementById("tallas").innerHTML = '';
             t.talla.forEach((t2,index) => {
-                console.log(t.talla);
                 document.getElementById("tallas").innerHTML += `
                 <input type="radio" class="btn-check" name="options" id="option${index}" autocomplete="off" value="${t2}">
                 <label class="btn btn-outline-dark mb-2" for="option${index}">${t2}</label>
@@ -231,7 +222,7 @@ function loadShoes() {
             `;
             
            
-            console.log("agregaC"+t.idTeni);
+         
             document.getElementById("agregaC"+t.idTeni).onclick = function () {
                 
                 
@@ -339,7 +330,10 @@ function cargarCarro(){
             <div class="row  mb-2 align-items-center">
             
             <img class="imama col-4" src="${c.imagen}">
-            <p class="pString col-5 my-2 mx-1 px-1">${c.modelo}-${c.talla}:    $${c.precio}</p>
+            <ul class="col-5 pString my-2 mx-1 px-1">
+            <li class="">${c.modelo}-${c.talla}:    $${c.precio}</li>
+            <li class="">Disponibles:${tenis.find(s=>s.idTeni==c.idTeni).stock}</li>
+            </ul>
             <input id="inputNumero${c.idTeni}" min="0" class=" inputNumero col-1 mb-1 p-0"type="number" value="1"></input>
            <button class="botonElis my-1 col-2 mt-0 mx-2 btn btn-outline-danger" id=elimina_${c.idTeni}>Eliminar</button>
 
